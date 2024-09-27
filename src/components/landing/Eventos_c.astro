@@ -1,0 +1,85 @@
+---
+// EnhancedEvents.astro
+const events = [
+  {
+    id: 1,
+    title: "Taller de Redacción de Artículos Científicos",
+    date: "15 Ago, 2024",
+    time: "16:00 hrs",
+    location: "Aula Magna de la E.P. de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, sede Ilo",
+    image: "../aimara/ARTICULOS_CIENTIFICOS.png",
+    link: "/Eventos_semi"
+  },
+  {
+    id: 1,
+    title: "Innovation and technological advances in the Andean region",
+    date: "03 Oct, 2024",
+    time: "10:00 hrs",
+    location: "Auditorio de la E.P. de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, sede Ilo",
+    image: "../aimara/andeanconference.png",
+    link: "/andeanconference"
+  },
+  
+];
+---
+
+<section class="bg-gradient-to-br from-gray-50 to-gray-100 py-16">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="flex flex-col lg:flex-row items-start">
+      <div class="lg:w-1/4 lg:sticky lg:top-8 self-start mb-12 lg:mb-0 pr-8">
+        <h2 class="text-3xl font-medium text-gray-800 mb-4">Nuestros eventos</h2>
+        <div class="w-16 h-1 bg-blue-500 mb-6"></div>
+        <p class="text-base text-gray-600 mb-8">
+          Nos complace presentar una serie de eventos diseñados para inspirar, educar y conectar a la comunidad. En cada evento, destacados profesionales y expertos compartirán sus conocimientos y experiencias, abordando las últimas tendencias y avances en tecnología, ciencia, y emprendimiento.
+        </p>
+      </div>
+      <div class="lg:w-3/4 lg:pl-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {events.map((event) => (
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:shadow-xl hover:-translate-y-2 float-animation">
+              <div class="relative overflow-hidden cursor-pointer" onclick={`window.location.href='${event.link}'`}>
+                <img src={event.image} alt={event.title} class="w-full h-48 object-cover transition duration-300 hover:scale-110"/>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300 flex items-center justify-center">
+                  <span class="text-white text-lg font-semibold">Ver detalles</span>
+                </div>
+                <div class="absolute top-0 left-0 bg-blue-600 text-white px-3 py-1 text-sm font-semibold">
+                  {event.date}
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">{event.title}</h3>
+                <p class="text-sm text-blue-600 mb-2">{event.time}</p>
+                <p class="text-sm text-gray-500 mb-4">{event.location}</p>
+                <a href={event.link} class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                  Ver detalles
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  .float-animation:nth-child(2n) {
+    animation-delay: -3s;
+  }
+</style>
+
+  <script>
+    document.querySelectorAll('.cursor-pointer').forEach(card => {
+      card.addEventListener('click', (e) => {
+        const link = e.currentTarget.closest('.float-animation').querySelector('a').href;
+        window.location.href = link;
+      });
+    });
+  </script>

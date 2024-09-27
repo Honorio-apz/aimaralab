@@ -1,0 +1,96 @@
+<header class="bg-white/95 backdrop-blur-md border-b border-black/5 fixed w-full top-0 z-50 transition-all duration-300" id="header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+      <div class="flex justify-start lg:w-0 lg:flex-1">
+        <a href="/" class="flex items-center ml-4 sm:ml-6 lg:ml-3"> <!-- Añadido margen izquierdo aquí -->
+          <img src="/logo/logo_color.png" alt="Logo" class="h-8 w-auto sm:h-10" />
+        </a>
+      </div>
+      <div class="-mr-2 -my-2 md:hidden">
+        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-celeste_aimara" aria-expanded="false" id="mobile-menu-button">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+        <a href="/" class="text-base font-medium text-gray-500 hover:text-celeste_aimara transition-colors duration-300">Home</a>
+        <a href="/#mision" class="text-base font-medium text-gray-500 hover:text-celeste_aimara transition-colors duration-300">About</a>
+        <a href="/miembros" class="text-base font-medium text-gray-500 hover:text-celeste_aimara transition-colors duration-300">Team</a>
+        <a href="/proyectos" class="text-base font-medium text-gray-500 hover:text-celeste_aimara transition-colors duration-300">Projects</a>
+      </nav>
+      <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+        <a href="/Eventos" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-celeste_aimara hover:bg-celeste_aimara/90 transition-colors duration-300">
+          Events
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="md:hidden hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">Home</a>
+      <a href="/#mision" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">About</a>
+      <a href="/miembros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">Team</a>
+      <a href="/proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">Projects</a>
+      <a href="/Eventos" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-celeste_aimara hover:bg-celeste_aimara/90 transition-colors duration-300">Events</a>
+    </div>
+  </div>
+</header>
+
+<!-- Espaciador para empujar el contenido debajo del header fijo -->
+<div id="header-spacer" class="h-16 md:h-20"></div>
+
+<script>
+  const header = document.getElementById('header');
+  const headerSpacer = document.getElementById('header-spacer');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let lastScrollY = window.scrollY;
+
+  function updateHeaderSpacerHeight() {
+    headerSpacer.style.height = `${header.offsetHeight}px`;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+      header.classList.add('header-hidden');
+    } else {
+      header.classList.remove('header-hidden');
+    }
+    lastScrollY = window.scrollY;
+  });
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    updateHeaderSpacerHeight();
+  });
+
+  window.addEventListener('resize', updateHeaderSpacerHeight);
+  document.addEventListener('DOMContentLoaded', updateHeaderSpacerHeight);
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  header {
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .header-hidden {
+    transform: translateY(-100%);
+  }
+
+  @media (max-width: 768px) {
+    #mobile-menu {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  }
+</style>

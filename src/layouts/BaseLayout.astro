@@ -1,0 +1,32 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Navigation from "../components/global/Navigation.astro";
+import Footer from "../components/global/Footer.astro";
+import { ViewTransitions } from 'astro:transitions';
+interface Props {
+  title: string;
+}
+
+const {title} = Astro.props;
+---
+<html
+  lang="en"
+  class="scroll-smooth selection:bg-accent-500 selection:text-white no-touchevents hydrated"
+>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="icon" type="image/svg+xml" href="logo_AIMara.ico"/>
+  <title>{title}</title>
+  <BaseHead />
+  <ViewTransitions />
+</head>
+
+<body class="bg-white flex flex-col min-h-svh">
+
+    <Navigation/>
+    <main class="grow"><slot /></main>
+    <Footer/>
+</body>
+
+</html>

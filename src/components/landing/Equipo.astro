@@ -1,0 +1,213 @@
+---
+import TeamMember from './TeamMember.astro';
+
+const TEAM_MEMBERS = [
+  {
+    name: 'Américo Rubín de Celis Vidal',
+    role: 'PhD. en Ingeniería Eléctrica',
+    description: 'Doctor en Ingeniería Eléctrica por la Pontificia Universidad Católica de Rio de Janeiro. Ex investigador en el Centro de Estudios en Telecomunicaciones.',
+    avatar: '/team/americo.jpg',
+    social: {
+      facebook: '#',
+      email: 'example@example.com',
+      linkedin: '#',
+      twitter: '#'
+    }
+  },
+  {
+    name: 'Honorio Apaza',
+    role: 'Computer Science | NLP',
+    description: 'Investigador en IA. Profesor en la UNAM, candidato a Maestría en Ciencias de la Computación en UNSA, investigador en NLP.',
+    avatar: '/team/honorio.jpg',
+    social: {
+      facebook: 'https://www.facebook.com/01001000.01A',
+      email: 'honorio.apz@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/honorio-aa/',
+      twitter: 'https://twitter.com/honyoffuture'
+    }
+  },
+  {
+    name: 'Wilbur Naike Chiuyari Veramendi',
+    role: 'Image Processing | Computer Vision',
+    description: 'Master en Ciencias de la Computación de la Universidad Federal de Sao Carlos (Brasil), especialista en visión por computadora.',
+    avatar: '/team/wilbur.jpeg',
+    social: {
+      email: 'nike.codeux@gmail.com',
+      facebook: 'https://www.facebook.com/nike.codeux',
+      linkedin: 'https://www.linkedin.com/in/wilbur-naike'
+    }
+  },
+  {
+    name: 'Carlos Silva Delgado',
+    role: 'Docente Universitario',
+    description: 'Profesor ordinario adscrito al Departamento de Ingeniería de Sistemas e Informática, de la Facultad de Ingeniería y Arquitectura, Universidad Nacional de Moquegua.',
+    avatar: '/team/carlos_silva.jpeg',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Victor Yana Mamani',
+    role: 'Docente Universitario',
+    description: 'Profesor ordinario adscrito al Departamento de Ingeniería de Sistemas e Informática, de la Facultad de Ingeniería y Arquitectura, Universidad Nacional de Moquegua.',
+    avatar: '/team/victor.jpeg',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Maribel Coaguila',
+    role: 'Docente Universitario',
+    description: 'Maestro en Ingeniería de Sistemas e Informática y Seguridad Informática, en Administración y Dirección de Empresas. Docente de la escuela profesional de Ingeniería de Sistemas e Informática de la UNAM.',
+    avatar: '/team/maribel.jpg',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Mariela Nina',
+    role: 'Student | Frontend',
+    description: 'Estudiante de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/Mariela.jpg',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Estrella Velasquez',
+    role: 'Student | Project Manager',
+    description: 'Graduated from the National University of Moquegua, scholarship recipient of the Summer program of the School of Applied Mathematics (Machine learning) of the Getulio Vargas Foundation (FGV) of Brazil.',
+    avatar: '/team/estrella.png',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Jose Paye',
+    role: 'Student | Full Stack',
+    description: 'Estudiante de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/jose.png',
+    portfolio: "test",
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Yoselin Arocutipa',
+    role: 'Student | Marketing Leader',
+    description: 'Estudiante de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/yoselin.jpg',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Jamir Balcona',
+    role: 'Student | Frontend',
+    description: 'Estudiante de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú. Desarrollador de la página web del grupo.',
+    avatar: '/team/jamir.jpeg',
+    social: {
+      email: 'jamir02viza@gmail.com',
+      facebook: 'https://www.facebook.com/jamiredu.balcona/',
+      linkedin: 'https://www.linkedin.com/in/jamir-balcona-viza-80826a218/'
+    },
+    portfolio: "test"
+  },
+  {
+    name: 'Seline Maquera',
+    role: 'Student | Logistic leader',
+    description: 'Estudiante de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/selin.jpg',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Allison Reynoso',
+    role: 'Student | Image processing',
+    description: 'Estudiante de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/allison.png',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Frank Ruiz',
+    role: 'Student | Image processing',
+    description: 'Estudiante destacado de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/frank.png',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  {
+    name: 'Edward Rocca',
+    role: 'Student | Estudiante destacado',
+    description: 'Estudiante destacado de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/eduard.png',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  },
+  
+  {
+    name: 'Elmer Collanqui',
+    role: 'Student | Frontend',
+    description: 'Estudiante destacado de la Escuela Profesional de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, Ilo, Perú.',
+    avatar: '/team/elmer.jpg',
+    social: {
+      email: '/',
+      facebook: '/',
+      linkedin: '/'
+    }
+  }
+];
+---
+
+  <section id="acerca_de_nosotros" class="bg-gray-100 w-full">
+    <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12 bg-gray-100">
+      <div class="mx-auto text-center">
+        <h1 class="text-4xl text-center tracking-tight font-medium text-black md:text-5xl font-display">
+          Nuestro Equipo
+        </h1>
+        <p class="mt-4 text-lg text-na mx-auto text-celeste_aimara">
+          _____________
+        </p>
+        <p class="mt-4 text-lg text-na mx-auto text-gray-500 mb-8">
+          Un grupo de investigadores de la UNAM y externos, compuesto por profesores, estudiantes y egresados, trabaja de forma conjunta para llevar a cabo investigación en línea en el área de Inteligencia Artificial y áreas afines.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipo" class="bg-white-100 w-full">
+    <div class="mx-auto max-w-7xl px-6 py-12">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        {TEAM_MEMBERS.map((member) => (
+          <TeamMember {...member} />
+        ))}
+      </div>
+    </div>
+  </section>
