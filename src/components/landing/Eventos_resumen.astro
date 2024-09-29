@@ -1,5 +1,5 @@
 ---
-import Eventos from "../components/landing/Eventos_resumen.astro";
+
 ---
 
 <section class="bg-gradient-to-br from-gray-50 to-gray-100 py-16">
@@ -39,7 +39,8 @@ import Eventos from "../components/landing/Eventos_resumen.astro";
 
 <!-- Importar el archivo de eventos -->
 <script type="module">
-  import { events } from '../src/components/landing/events.js';
+  import { events } from '/src/components/landing/events.js';
+  
 
   const eventsContainer = document.getElementById('events-container');
 
