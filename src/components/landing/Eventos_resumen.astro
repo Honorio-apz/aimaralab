@@ -1,0 +1,62 @@
+<section class="bg-gradient-to-br from-gray-50 to-gray-100 py-16">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="flex flex-col lg:flex-row items-start">
+      <div class="lg:w-1/4 lg:sticky lg:top-8 self-start mb-12 lg:mb-0 pr-8">
+        <h2 class=" text-3xl font-roboto tracking-tight text-gray-900 sm:text-3xl">Recent News</h2>
+        <p class="mt-4 text-lg text-na mx-auto text-celeste_aimara">
+          _____________
+        </p>
+        <br>
+        <p class="text-base text-gray-600 mb-8">
+          Stay informed with the latest updates from our research group and the technology community. In this section, we bring you the most recent news, events, and breakthroughs in artificial intelligence, data science, and related fields.
+        </p>
+      </div>
+      <div class="lg:w-3/4 lg:pl-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="events-container">
+          <!-- Aquí se inyectarán los eventos dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  .float-animation:nth-child(2n) {
+    animation-delay: -3s;
+  }
+</style>
+
+<!-- Importar el archivo de eventos -->
+<script type="module">
+  import { events } from '/media/honorio/sd/files/PAGEWEB/aimaralab/src/components/landing/events.js';
+
+  const eventsContainer = document.getElementById('events-container');
+
+  // Generar dinámicamente el HTML para los eventos
+  events.forEach(event => {
+    const eventCard = `
+      <div class="bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg p-6">
+        <div class="border-l-4 border-teal-200 pl-4 mb-4">
+          <span class="text-celeste_aimara font-semibold text-xs uppercase">${event.date}</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">${event.title}</h3>
+        <p class="text-sm text-celeste_aimara mb-2">${event.time}</p>
+        <p class="text-sm text-gray-600 mb-4">${event.location}</p>
+        <div class="flex justify-start">
+          <a href="${event.link}" class="rounded-lg  bg-gray-700 border-gray-800 px-3 py-2 text-sm font-medium text-white hover:bg-black hover:bg-celeste_aimara/90 transition-colors duration-150">
+            Ver detalles
+          </a>
+        </div>
+      </div>
+
+      `;
+    eventsContainer.innerHTML += eventCard;
+  });
+</script>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Clock, Award, Mail } from 'lucide-react';
+import { Calendar, MapPin, Clock, Award, Mail, CalendarPlus  } from 'lucide-react';
 
 const SeminarioPage = () => {
   const talleres = [
@@ -80,7 +80,27 @@ const SeminarioPage = () => {
         </section>
        
 
-       
+          <section className='mb-14'>
+            <h2 className="text-xl sm:text-2xl font-light mb-6">Registro</h2>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-between transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
+              <div className="flex items-center">
+                <CalendarPlus className="text-blue-500 mr-4 flex-shrink-0" size={24} />
+                <div>
+                  <p className="font-semibold">¡Únete a nuestro evento!</p>
+                  <p className="text-gray-600">No te pierdas esta oportunidad única</p>
+                </div>
+              </div>
+              <a 
+                href="https://forms.gle/CzA2WZEAK8aFDHKa8" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
+              >
+                Registrarse
+              </a>
+            </div>
+        </section>
+
         <section>
           <h2 className="text-xl sm:text-2xl font-light mb-6">Contacto</h2>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center transition-all duration-300 hover:shadow-lg hover:bg-gray-50">

@@ -53,7 +53,7 @@ export default function CreativeCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden rounded-xl shadow-2xl">
+    <div className="relative w-[600px] h-[500px] overflow-hidden rounded-xl shadow-2xl">
       <div 
         ref={carouselRef}
         className="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-out flex"

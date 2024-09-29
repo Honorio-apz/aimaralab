@@ -18,17 +18,26 @@ const projects = [
 ];
 ---
 
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+
 <section id="proyectos" class="bg-gray-100 w-full mt-12">
   <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-12 scroll-mt-12 bg-gray-100">
-    <div class="mx-auto text-center max-w-3xl">
-      <h1 class="text-4xl text-center tracking-tight font-medium text-black md:text-5xl font-display mb-4">
-        Proyectos
-      </h1>
-      <div class="h-1 w-24 bg-celeste_aimara mx-auto mb-6"></div>
-      <p class="text-lg text-gray-600 mb-12">
-        Los proyectos de AiMara se desarrollan basados en necesidades o problemas detectados de la sociedad en general, y brindan una solución efectiva.
-      </p>
+    <br>
+    <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12 bg-gray-100 flex flex-col items-center">
+        <h1 class="text-3xl font-roboto tracking-tight text-gray-900 sm:text-3xl">Our projects</h1>
+        <div class="border-b border-celeste_aimara w-1/2 mt-4"></div>
+        <br>
+        <p class="text-base text-gray-600 mb-8 text-center">
+          The AiMara research projects are developed based on needs or problems identified in society as a whole, providing an effective solution.        </p>
     </div>
+    <br>
+
+
+
+
     
     <div class="grid grid-cols-1 gap-10 mt-10 lg:grid-cols-3">
       {projects.map((project) => (
@@ -44,12 +53,10 @@ const projects = [
       ))}
     </div>
     
-    <div class="flex justify-center mt-12">
-      <a
-        href="/proyectos"
-        class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gray-800 rounded-lg group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-boton_aimara hover:text-black transition-colors duration-300 ease-in-out"
-      >
-        Ver Todos
+    <div class="mt-8 flex items-center space-x-4">
+      <a href="/proyectos"
+         class="rounded-lg border bg-gray-700 border-gray-800 px-3 py-2 text-sm font-medium text-white hover:bg-black hover:text-white transition-colors duration-150">
+        Ver todos
       </a>
     </div>
   </div>
