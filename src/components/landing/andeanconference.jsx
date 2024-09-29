@@ -13,9 +13,9 @@ const SeminarioPage = () => {
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen text-gray-800 font-sans">
+    <div className="g-gradient-to-b min-h-screen text-gray-800 font-sans">
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-10">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-0">
           <h1 className="text-2xl sm:text-3xl font-light text-center sm:text-left">Innovation and technological advances in the Andean region</h1>
         </div>
       </header>
@@ -68,7 +68,7 @@ const SeminarioPage = () => {
               </thead>
               <tbody>
                 {talleres.map((taller, index) => (
-                  <tr key={taller.id} className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} transition-colors duration-300 hover:bg-gray-100`}>
+                  <tr key={taller.id} className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} transition-colors duration-300 hover:g-gradient-to-b`}>
                     <td className="border-t px-4 py-2">{taller.nombre}</td>
                     <td className="border-t px-4 py-2">{taller.Ponente}</td>
                     <td className="border-t px-4 py-2">{taller.hora}</td>
