@@ -14,11 +14,7 @@ const SeminarioPage = () => {
 
   return (
     <div className="g-gradient-to-b min-h-screen text-gray-800 font-sans">
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-10">
-        <div className="container mx-auto px-4 sm:px-6 py-0">
-          <h1 className="text-2xl sm:text-3xl font-light text-center sm:text-left">Innovation and technological advances in the Andean region</h1>
-        </div>
-      </header>
+      
       
       <main className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-8">
         <div className="mb-8">
