@@ -1,87 +1,99 @@
+---
+const projects = [
+  {
+    title: "AiMara Chatbots",
+    description: "Un proyecto centrado en la creación de corpus de datos específicos según la necesidad y creación de chatbots con modelos de inteligencia artificial para optimizar los procesos administrativos en instituciones públicas y privadas.",
+    image: "/chatbot.png"
+  },
+  {
+    title: "AiMara Translator",
+    description: "Proyecto enfocado en la generación de corpus de datos en lenguas nativas peruanas, como quechua y aimara, para el desarrollo de modelos de inteligencia artificial capaces de traducir, reconocer audios y generar contenido contextual y audio en estos idiomas.",
+    image: "/translator.jpeg",
+    app: "AiMara Translator App",
+    link:"/andeanconference",
+    app1: "Translation Validation software App",
+    link1:"/andeanconference"
+  },
+  {
+    title: "AiMara Legal",
+    description: "Proyecto destinado a desarrollar un modelo de inteligencia artificial que comprenda completamente el marco legal peruano, facilitando el acceso a la justicia de manera equitativa y sin discriminación.",
+    image: "/nlplegal.jpeg"
+  }
+];
+---
 
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 
-<section id="acerca_de_nosotros" class="g-gradient-to-b w-full">
-  
-  <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12 g-gradient-to-b flex flex-col items-center"> <br>
+<section id="proyectos" class="g-gradient-to-b w-full ">
+  <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-2 scroll-mt-0 g-gradient-to-b">
+    
+    <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12 g-gradient-to-b flex flex-col items-center">
+      <br>
       <h1 class="text-3xl font-roboto tracking-tight text-gray-900 sm:text-3xl">Our projects</h1>
       <div class="border-b border-celeste_aimara w-1/2 mt-4"></div>
       <br>
       <p class="text-base text-gray-600 mb-8 text-center">
-        The AiMara research projects are developed based on needs or problems identified in society as a whole, providing an effective solution.        </p>
-  </div>
-  
-  </div>
-</section>
+        The AiMara research projects are developed based on needs or problems identified in society as a whole, providing an effective solution.
+      </p>
+    </div>
+    
 
-
-<section id="proyectos" class="bg-white-100 w-full mt-12">
-  <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12">
-      <div class="grid grid-cols-1 gap-8 mt-6 lg:grid-cols-3 justify-items-center">
-          <!-- Proyecto 1 -->
-          <div class="relative flex flex-col text-gray-700 bg-white shadow-lg rounded-xl w-full overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative h-56 overflow-hidden">
-                  <img src="/chatbot.png" alt="AiMara Chatbot" class="w-full h-full object-cover" />
-              </div>
-              <div class="p-6">
-                  <h5 class="text-xl font-semibold text-gray-800 mb-2">AiMara Chatbot</h5>
-                  <p class="text-base text-gray-600 mb-4">
-                    Este proyecto se centra en la creación de corpus de datos específicos segun la necesidad y el desarrollo de chatbots con modelos de inteligencia artificial, destinados a optimizar procesos administrativos en instituciones públicas y privadas, mejorando así la eficiencia operativa y la calidad del servicio.
-
-
-                  </p>
-                  <div class="flex mt-8">
-                    <a href="/proyectos" class="rounded-lg  bg-gray-700 border-gray-800 px-3 py-2 text-sm font-medium text-white hover:bg-black hover:bg-celeste_aimara/90 transition-colors duration-150">
-                      Ver mas
-                    </a>
-                  </div>
-              </div>
+    <div class="space-y-6 mt-8">
+      {projects.map((project) => (
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm transition-transform transform hover:scale-105 hover:shadow-lg">
+          <div class="md:flex">
+            <img src={project.image} alt={project.title} class="w-full h-64 object-cover rounded-t-lg md:rounded-none md:rounded-l-lg md:w-1/3" />
+            <div class="p-6 flex flex-col justify-between md:w-2/3">
+              <h3 class="text-2xl font-semibold text-[#000000] mb-3">{project.title}</h3>
+              <p class="text-gray-600 mb-4">
+                {project.description}
+              </p>
+              <a href={project.link} class="self-start text-[#00c2cb] font-medium hover:underline">{project.app} </a>
+              <a href={project.link1} class="self-start text-[#00c2cb] font-medium hover:underline">{project.app1} </a>
+              
+            </div>
           </div>
-
-          <!-- Proyecto 2 -->
-          <div class="relative flex flex-col text-gray-700 bg-white shadow-lg rounded-xl w-full overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative h-56 overflow-hidden">
-                  <img src="/translator.jpeg" alt="AiMara Translator" class="w-full h-full object-cover" />
-              </div>
-              <div class="p-6">
-                  <h5 class="text-xl font-semibold text-gray-800 mb-2">AiMara Translator</h5>
-                  <p class="text-base text-gray-600 mb-4">
-                    El proyecto está enfocado en la creación de corpus de datos en lenguas nativas peruanas, como quechua y aimara, pensando en desarrollar modelos de inteligencia artificial que traduzcan, reconozcan audio y generen contenido contextual y audio, promoviendo la inclusión digital de hablantes nativos.
+        </div>
+      ))}
+    </div>
+    
+    
+    
+    
+    
 
 
-                  </p>
-                  <div class="flex mt-8">
-                    <a href="/proyectos" class="rounded-lg  bg-gray-700 border-gray-800 px-3 py-2 text-sm font-medium text-white hover:bg-black hover:bg-celeste_aimara/90 transition-colors duration-150">
-                      Ver mas
-                    </a>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Proyecto 3 -->
-          <div class="relative flex flex-col text-gray-700 bg-white shadow-lg rounded-xl w-full overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative h-56 overflow-hidden">
-                  <img src="/nlplegal.jpeg" alt="AiMara Classifier" class="w-full h-full object-cover" />
-              </div>
-              <div class="p-6">
-                  <h5 class="text-xl font-semibold text-gray-800 mb-2">AiMara legal</h5>
-                  <p class="text-base text-gray-600 mb-4">
-                    Este proyecto tiene como objetivo desarrollar un modelo de inteligencia artificial que entienda el marco legal peruano. Se pretende facilitar el acceso a la justicia de manera equitativa y sin discriminación, mejorando la transparencia y eficiencia en la administración judicial para todos los Peruanos.
-
-
-                  </p>
-                  <div class="flex mt-8">
-                    <a href="/proyectos" class="rounded-lg  bg-gray-700 border-gray-800 px-3 py-2 text-sm font-medium text-white hover:bg-black hover:bg-celeste_aimara/90 transition-colors duration-150">
-                      Ver mas
-                    </a>
-                  </div>
-              </div>
-          </div>
-      </div>
   </div>
 </section>
-<br><br>
 
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
+  #proyectos .grid > div {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  #proyectos .grid > div:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  #proyectos .grid > div:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  #proyectos .grid > div:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+</style>

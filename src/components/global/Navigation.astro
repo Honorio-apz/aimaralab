@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
       <div class="flex justify-start lg:w-0 lg:flex-1">
-        <a href="/" class="flex items-center ml-4 sm:ml-6 lg:ml-3"> <!-- Añadido margen izquierdo aquí -->
+        <a href="/" class="flex items-center ml-4 sm:ml-6 lg:ml-3">
           <img src="/logo/logo_color.png" alt="Logo" class="h-8 w-auto sm:h-10" />
         </a>
       </div>
@@ -15,7 +15,7 @@
         </button>
       </div>
       <nav class="hidden md:flex space-x-10">
-        <a href="/" class=" text-base font-normal text-gray-700 hover:text-celeste_aimara transition-colors duration-300">Home</a>
+        <a href="/" class="text-base font-normal text-gray-700 hover:text-celeste_aimara transition-colors duration-300">Home</a>
         <a href="/about" class="text-base font-normal text-gray-700 hover:text-celeste_aimara transition-colors duration-300">About</a>
         <a href="/miembros" class="text-base font-normal text-gray-700 hover:text-celeste_aimara transition-colors duration-300">Team</a>
         <a href="/proyectos" class="text-base font-normal text-gray-700 hover:text-celeste_aimara transition-colors duration-300">Projects</a>
@@ -32,11 +32,12 @@
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="md:hidden hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">Home</a>
-      <a href="/#mision" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">About</a>
-      <a href="/miembros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">Team</a>
-      <a href="/proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300">Projects</a>
-      <a href="/Eventos" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-celeste_aimara hover:bg-celeste_aimara/90 transition-colors duration-300">Events</a>
+      <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300" onclick="navigateAndCloseMenu(event)">Home</a>
+      <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300" onclick="navigateAndCloseMenu(event)">About</a>
+      <a href="/miembros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300" onclick="navigateAndCloseMenu(event)">Team</a>
+      <a href="/proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300" onclick="navigateAndCloseMenu(event)">Projects</a>
+      <a href="/galeria" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-celeste_aimara hover:bg-gray-50 transition-colors duration-300" onclick="navigateAndCloseMenu(event)">Gallery</a>
+      <a href="/Eventos" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-celeste_aimara hover:bg-celeste_aimara/90 transition-colors duration-300" onclick="navigateAndCloseMenu(event)">Events</a>
     </div>
   </div>
 </header>
@@ -54,13 +55,39 @@
     headerSpacer.style.height = `${header.offsetHeight}px`;
   }
 
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden'); // Cierra el menú
+    mobileMenuButton.setAttribute('aria-expanded', 'false'); // Actualiza el estado del botón
     updateHeaderSpacerHeight();
+  }
+
+  function openMobileMenu() {
+    mobileMenu.classList.remove('hidden'); // Abre el menú
+    mobileMenuButton.setAttribute('aria-expanded', 'true'); // Actualiza el estado del botón
+    updateHeaderSpacerHeight();
+  }
+
+  function toggleMobileMenu() {
+    const isHidden = mobileMenu.classList.toggle('hidden'); // Alterna entre abrir/cerrar el menú
+    mobileMenuButton.setAttribute('aria-expanded', !isHidden); // Actualiza el atributo 'aria-expanded'
+    updateHeaderSpacerHeight();
+  }
+
+  // Evento para manejar el clic en el botón del menú móvil
+  mobileMenuButton.addEventListener('click', () => {
+    toggleMobileMenu(); // Alterna el estado del menú
   });
 
-  window.addEventListener('resize', updateHeaderSpacerHeight);
-  document.addEventListener('DOMContentLoaded', updateHeaderSpacerHeight);
+  // Evento para cerrar el menú al hacer clic en un enlace
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', (event) => {
+      closeMobileMenu(); // Cierra el menú al hacer clic en un enlace
+    });
+  });
+
+  window.addEventListener('resize', updateHeaderSpacerHeight); // Ajusta el espaciador en caso de cambio de tamaño de la ventana
+  document.addEventListener('DOMContentLoaded', updateHeaderSpacerHeight); // Ajusta el espaciador al cargar la página
+
 </script>
 
 <style>
