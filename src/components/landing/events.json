@@ -1,6 +1,15 @@
 
 [
-    {
+  {
+    "id": 1,
+    "title": "SIMBig 2024 ",
+    "date": "20 - 22 Nov, 2024",
+    "time": "10:00 hrs",
+    "location": "Auditorio de la E.P. de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, sede Ilo",
+    "image": "../aimara/simbig24.png",
+    "link": "https://simbig.org/SIMBig2024/"
+  },
+  {
       "id": 1,
       "title": "Innovation and technological advances in the Andean region",
       "date": "03 Oct, 2024",
