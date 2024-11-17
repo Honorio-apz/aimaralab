@@ -29,10 +29,10 @@ const SeminarioPage = () => {
 
         <section className="mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4">
-            En el ámbito académico y científico, la publicación de artículos es una actividad fundamental para la difusión del conocimiento y el avance de la ciencia. Este seminario está diseñado para proporcionar a los participantes un conocimiento exhaustivo de los principios y prácticas de la redacción científica, con un enfoque teórico-práctico.
+          In the academic and scientific field, the publication of articles is a fundamental activity for the dissemination of knowledge and the advancement of science. This seminar is designed to provide participants with a thorough knowledge of the principles and practices of scientific writing, with a theoretical-practical approach.
           </p>
           <p className="text-base sm:text-lg leading-relaxed mb-4">
-            A lo largo de 7 sesiones, los participantes aprenderán a estructurar y redactar artículos científicos, adquirirán una comprensión profunda del proceso de publicación y se formarán en la ética en la publicación científica.
+          Over the course of 7 sessions, participants will learn how to structure and write scientific articles, gain a deep understanding of the publication process, and be trained in ethics in scientific publishing.
           </p>
         </section>
 

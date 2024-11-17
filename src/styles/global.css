@@ -39,3 +39,9 @@
   }
 }
 
+@layer utilities {
+  ::selection {
+      background-color: #6b7280; /* Slate-500 */
+      color: #ffffff; /* Blanco */
+  }
+}
