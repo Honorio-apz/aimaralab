@@ -1,6 +1,32 @@
 ---
 import 'photoswipe/style.css';
+
+// Gallery.astro
+import { Image } from 'astro:assets';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
+
+// Define the image paths and details
+const galleryImages = [
+  { href: '/fotos/foto1.jpg', src: '/fotos/foto1.jpg' },
+  { href: '/fotos/foto2.jpg', src: '/fotos/foto2.jpg' },
+  { href: '/fotos/foto3.jpg', src: '/fotos/foto3.jpg' },
+  { href: '/fotos/foto4.jpg', src: '/fotos/foto4.jpg' },
+  { href: '/fotos/foto5.jpg', src: '/fotos/foto5.jpg' },
+  { href: '/fotos/foto6.jpg', src: '/fotos/foto6.jpg' },
+  { href: '/fotos/foto7.jpg', src: '/fotos/foto7.jpg' },
+  { href: '/fotos/foto8.jpg', src: '/fotos/foto8.jpg' },
+  { href: '/fotos/foto9.png', src: '/fotos/foto9.png' },
+  { href: '/fotos/foto10.png', src: '/fotos/foto10.png' },
+  { href: '/fotos/foto11.png', src: '/fotos/foto11.png' },
+  { href: '/fotos/foto12.png', src: '/fotos/foto12.png' },
+  { href: '/fotos/foto13.png', src: '/fotos/foto13.png' },
+  { href: '/fotos/foto14.png', src: '/fotos/foto14.png' },
+  { href: '/fotos/foto15.png', src: '/fotos/foto15.png' },
+  { href: '/fotos/foto16.png', src: '/fotos/foto16.png' },
+];
 ---
+
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
@@ -27,105 +53,44 @@ import 'photoswipe/style.css';
 
 <div class="w-full mx-auto bg-gray-1 pt-4 pb-4 mt-0" id="galeria">
   <div class="w-3/4 mx-auto mt-0">
-    <div 
-      class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible"
-    >
-      
+    <div class="grid min-h-[140px] w-full place-items-center  rounded-lg p-6 lg:overflow-visible">
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div>
-          <a href="/fotos/foto1.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-            <img src="/fotos/foto18.png" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-          </a>
-        </div>
-        <div>
-          <a href="/fotos/foto2.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-                <img src="/fotos/foto17.png" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-          </a>
-        </div>
-        <div>
-          <a href="/fotos/foto3.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto16.png" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-          </a>
-        </div>
-        <div>
-          <a href="/fotos/foto3.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto13.png" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-          </a>
-        </div>
-        <div>
-            <a href="/fotos/foto1.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-                  <img src="/fotos/foto1.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-                </a>
-        </div>
-        <div>
-            <a href="/fotos/foto2.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-                <img src="/fotos/foto2.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-              </a>
-        </div>
-        <div>
-          <a href="/fotos/foto3.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto3.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
+        {galleryImages.map((image, index) => (
+          <div>
+            <a 
+              href={image.href}
+              data-pswp-width="2500"
+              data-pswp-height="1666"
+              target="_blank"
+            >
+              <Image
+                src={image.src}
+                alt={`Gallery image ${index + 1}`}
+                width={600}
+                height={400}
+                class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+              />
             </a>
-        </div>
-        <div>
-          <a href="/fotos/foto4.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto4.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto5.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto5.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto6.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto6.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto7.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto7.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto8.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto8.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto9.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto9.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto10.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto10.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto11.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto11.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        <div>
-          <a href="/fotos/foto12.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" class="">
-              <img src="/fotos/foto12.jpg" alt="" class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            </a>
-        </div>
-        
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </div>
 
-
 <script>
-    import PhotoSwipeLightbox from "photoswipe/lightbox"
-
+  const initPhotoSwipe = () => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#galeria',
       children: 'a',
-      pswpModule: () => import('photoswipe'),
+      pswpModule: () => import('photoswipe')
     });
+    
     lightbox.init();
+  };
+
+  // Initialize on client-side
+  if (typeof document !== 'undefined') {
+    initPhotoSwipe();
+  }
 </script>
