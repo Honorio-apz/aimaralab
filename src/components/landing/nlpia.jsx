@@ -28,8 +28,15 @@ const SeminarioPage = () => {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl sm:text-2xl font-light mb-6">Detalles del Seminario</h2>
+          <h2 className="text-xl sm:text-2xl font-light mb-6">Detail of event</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="bg-white shadow-md rounded-lg p-4 flex items-center transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
+              <Calendar className="text-blue-500 mr-4 flex-shrink-0" size={24} />
+              <div>
+                <p className="font-semibold">Registration (Inscripciones)</p>
+                <a href="https://forms.gle/7M9xxXT6kx9T8uyX6" className="text-blue-500 hover:underline">hacer click aqui.</a>
+              </div>
+            </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
               <Calendar className="text-blue-500 mr-4 flex-shrink-0" size={24} />
               <div>
