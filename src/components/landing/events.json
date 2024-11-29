@@ -2,6 +2,15 @@
 [
   {
     "id": 1,
+    "title": "I Seminario de PLN y IA ",
+    "date": "10 Dic, 2024",
+    "time": "10:00 hrs",
+    "location": "Auditorio de la E.P. de Ingeniería de Sistemas e Informática, Universidad Nacional de Moquegua, sede Ilo",
+    "image": "../aimara/NLPIA.png",
+    "link": "/nlpia"
+  },
+  {
+    "id": 1,
     "title": "SIMBig 2024 ",
     "date": "20 - 22 Nov, 2024",
     "time": "10:00 hrs",
@@ -27,4 +36,5 @@
       "image": "../aimara/seminario.png",
       "link": "/Eventos_semi"
     }
+
   ]
