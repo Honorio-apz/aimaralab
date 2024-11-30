@@ -3,12 +3,12 @@ import { ChevronLeft, ChevronRight, Facebook, Linkedin } from 'lucide-react';
 
 const images = [
   "fotos/foto10.png",
-  "fotos/foto1.jpg",
+  "fotos/foto14.png",
   "fotos/foto2.jpg",
-  "fotos/foto3.jpg",
-  "fotos/foto4.jpg",
+  "fotos/foto18.png",
+  "fotos/foto19.png",
   "fotos/foto5.jpg",
-  "fotos/foto6.jpg",
+  "fotos/foto21.png",
   "fotos/foto7.jpg",
   "fotos/foto8.jpg",
   "fotos/foto9.png",
@@ -59,7 +59,8 @@ export default function CreativeCarousel() {
   };
 
   return (
-    <div className="relative w-[600px] h-[500px] overflow-hidden rounded-xl shadow-2xl">
+   
+    <div className="relative w-full max-w-[100%] sm:max-w-[600px] h-[400px] sm:h-[500px] overflow-hidden rounded-xl shadow-2xl">
       <div 
         ref={carouselRef}
         className="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-out flex"

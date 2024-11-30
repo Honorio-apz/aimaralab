@@ -1,10 +1,6 @@
 ---
 import 'photoswipe/style.css';
-
-// Gallery.astro
 import { Image } from 'astro:assets';
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
 
 // Define the image paths and details
 const galleryImages = [
@@ -36,31 +32,25 @@ const galleryImages = [
 </head>
 
 <section id="acerca_de_nosotros" class="g-gradient-to-b w-full">
-  <div
-    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12 g-gradient-to-b"
-  >
-  
   <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12 g-gradient-to-b flex flex-col items-center"> 
-      <h1 class="text-3xl font-roboto tracking-tight text-gray-900 sm:text-3xl">Gallery</h1>
-      <div class="border-b border-celeste_aimara w-1/2 mt-4"></div>
-      <br>
-      <p class="text-base text-gray-600 mb-8 text-center">
-        As a group, we participate in and organize various activities related to Artificial Intelligence and Computer Science, as well as share fraternal moments to strengthen our bonds and exchange ideas and experiences.  </div>
+    <h1 class="text-3xl font-roboto tracking-tight text-gray-900 sm:text-3xl">Gallery</h1>
+    <div class="border-b border-celeste_aimara w-1/2 mt-4"></div>
+    <br>
+    <p class="text-base text-gray-600 mb-8 text-center">
+      As a group, we participate in and organize various activities related to Artificial Intelligence and Computer Science, as well as share fraternal moments to strengthen our bonds and exchange ideas and experiences.
+    </p>
   </div>
 </section>
 
-
 <div class="w-full mx-auto bg-gray-1 pt-4 pb-4 mt-0" id="galeria">
   <div class="w-3/4 mx-auto mt-0">
-    <div class="grid min-h-[140px] w-full place-items-center  rounded-lg p-6 lg:overflow-visible">
+    <div class="grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible">
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {galleryImages.map((image, index) => (
           <div>
-            <a 
-              href={image.href}
-              data-pswp-width="2500"
-              data-pswp-height="1666"
-              target="_blank"
+            <div 
+              class="image-item cursor-pointer"
+              data-src={image.href}
             >
               <Image
                 src={image.src}
@@ -69,7 +59,7 @@ const galleryImages = [
                 height={400}
                 class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
               />
-            </a>
+            </div>
           </div>
         ))}
       </div>
@@ -77,19 +67,75 @@ const galleryImages = [
   </div>
 </div>
 
-<script>
-  const initPhotoSwipe = () => {
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '#galeria',
-      children: 'a',
-      pswpModule: () => import('photoswipe')
-    });
-    
-    lightbox.init();
-  };
+<!-- Modal para visualización de imágenes -->
+<div 
+  id="imageModal" 
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 hidden overflow-hidden p-2 sm:p-4"
+>
+  <div class="relative flex items-center justify-center">
+    <button 
+      id="closeModal" 
+      class="absolute -top-8 sm:-top-10 right-0 text-white bg-gray-700/50 hover:bg-gray-700/70 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center z-60 text-sm sm:text-base"
+    >
+      ✕
+    </button>
+    <img 
+      id="modalImage" 
+      src="" 
+      alt="Imagen a tamaño completo" 
+      class="max-w-[95%] max-h-[95vh] object-contain transition-all duration-300 ease-in-out"
+    />
+  </div>
+</div>
 
-  // Initialize on client-side
-  if (typeof document !== 'undefined') {
-    initPhotoSwipe();
-  }
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const imageItems = document.querySelectorAll('.image-item');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    // Función para abrir el modal
+    function openModal(imageSrc) {
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      
+      // Prevenir scroll en el body
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      modalImage.src = '';
+      
+      // Restaurar scroll en el body
+      document.body.style.overflow = 'auto';
+    }
+
+    // Agregar eventos a las imágenes de la galería
+    imageItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const imageSrc = item.getAttribute('data-src');
+        openModal(imageSrc);
+      });
+    });
+
+    // Evento para cerrar con el botón
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Cerrar modal al hacer clic fuera de la imagen
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  });
 </script>
