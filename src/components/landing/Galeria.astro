@@ -89,53 +89,85 @@ const galleryImages = [
 </div>
 
 <script>
+  // Ensure the script runs after the DOM is fully loaded
   document.addEventListener('DOMContentLoaded', () => {
+    // Select all elements to ensure they're available
     const imageItems = document.querySelectorAll('.image-item');
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const closeModalBtn = document.getElementById('closeModal');
 
-    // Función para abrir el modal
+    // Function to open the modal
     function openModal(imageSrc) {
+      // Ensure the image source is set before showing the modal
       modalImage.src = imageSrc;
-      modal.classList.remove('hidden');
       
-      // Prevenir scroll en el body
-      document.body.style.overflow = 'hidden';
+      // Use a small timeout to ensure image is loaded
+      setTimeout(() => {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }, 50);
     }
 
-    // Función para cerrar el modal
+    // Function to close the modal
     function closeModal() {
       modal.classList.add('hidden');
       modalImage.src = '';
-      
-      // Restaurar scroll en el body
       document.body.style.overflow = 'auto';
     }
 
-    // Agregar eventos a las imágenes de la galería
-    imageItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const imageSrc = item.getAttribute('data-src');
-        openModal(imageSrc);
+    // Add event listeners with extra safety
+    function addModalListeners() {
+      // Remove existing listeners first to prevent multiple bindings
+      imageItems.forEach(item => {
+        item.removeEventListener('click', imageClickHandler);
+        item.addEventListener('click', imageClickHandler);
       });
-    });
 
-    // Evento para cerrar con el botón
-    closeModalBtn.addEventListener('click', closeModal);
-
-    // Cerrar modal al hacer clic fuera de la imagen
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        closeModal();
+      function imageClickHandler(event) {
+        const imageSrc = event.currentTarget.getAttribute('data-src');
+        openModal(imageSrc);
       }
-    });
 
-    // Cerrar con tecla Escape
+      // Ensure close button listener
+      closeModalBtn.removeEventListener('click', closeModal);
+      closeModalBtn.addEventListener('click', closeModal);
+
+      // Modal background close
+      modal.removeEventListener('click', modalBackgroundCloseHandler);
+      modal.addEventListener('click', modalBackgroundCloseHandler);
+
+      function modalBackgroundCloseHandler(event) {
+        if (event.target === modal) {
+          closeModal();
+        }
+      }
+    }
+
+    // Initial setup of listeners
+    addModalListeners();
+
+    // Escape key handler
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
         closeModal();
       }
     });
+
+    // Optional: Re-add listeners if content is dynamically loaded
+    if (window.MutationObserver) {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.addedNodes.length) {
+            addModalListeners();
+          }
+        });
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
   });
 </script>
