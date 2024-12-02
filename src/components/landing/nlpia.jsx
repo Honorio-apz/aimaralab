@@ -4,7 +4,7 @@ import { Calendar, MapPin, Clock, Award, Mail , Globe} from 'lucide-react';
 const SeminarioPage = () => {
   const talleres = [
     { id: 1, nombre: 'Análisis de Características MGC y UGC para Estimar Nivel de Aceptación en el sector Inmobiliario', fecha: 'Pedro Shiguihara', hora: '10:00 AM' },
-    { id: 2, nombre: 'Modelos Neuronales de Traducción Auatomatica para las Lenguas Nativas', fecha: 'Honorio Apaza', hora: '10:30 AM' },
+    { id: 2, nombre: 'Modelos Neuronales de Traducción Automatica para las Lenguas Nativas', fecha: 'Honorio Apaza', hora: '10:30 AM' },
     { id: 3, nombre: 'Estudio Infodemiológico de Covid-19 Usando Minería de Datos y Procesamiento de Lenguaje Natural', fecha: 'Anibal Flores', hora: '11:00 AM' },
     
   ];
