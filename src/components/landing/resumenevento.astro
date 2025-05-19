@@ -2,29 +2,58 @@
 const { event } = Astro.props;
 ---
 
-<article class="bg-white border border-black/20 rounded-2xl p-8 flex flex-col h-full transition ">
-  <div class="flex flex-col gap-2 mb-2">
-    <div class="flex flex-wrap gap-4 items-center">
-      <span class="inline-block bg-celeste_aimara/20 text-celeste_aimara font-semibold px-3 py-0.5 rounded text-xs">{event.date}</span>
-      <span class="text-gray-800 font-semibold text-sm">{event.time}</span>
-      <span class="text-gray-400 text-sm">{event.location}</span>
-    </div>
-    <h2 class="text-xl font-roboto font-bold text-gray-900 mt-2 mb-1 tracking-tight">{event.title}</h2>
-    <div class="w-10 h-1 bg-celeste_aimara rounded mb-2"></div>
+<article class="bg-white border border-black/15 rounded-xl p-6 flex flex-col h-full transition hover:shadow-lg">
+  <!-- Título -->
+  <h2 class="text-2xl font-blod tracking-tight text-gray-900 font-roboto mb-1">
+    {event.title}
+  </h2> 
+  <div><br></div>
+  <div class="w-16 h-[2.5px] bg-celeste_aimara rounded mb-3"> </div>
+  <div><br></div>
+  <!-- Descripción -->
+  <p class="text-gray-700 mb-4 text-base line-clamp-3">
+    {event.description}
+  </p>
+  
+  <!-- Metadatos con iconos -->
+  <div class="flex flex-wrap gap-x-6 gap-y-2 items-center text-sm mb-4">
+    <span class="flex items-center gap-1 text-celeste_aimara font-semibold">
+      <!-- Calendar Icon -->
+      <svg class="w-4 h-4 text-celeste_aimara" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="currentColor"/>
+        <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor"/>
+      </svg>
+      {event.date}
+    </span>
+    <span class="flex items-center gap-1 text-gray-700 font-medium">
+      <!-- Clock Icon -->
+      <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" />
+        <path d="M12 6v6l4 2" stroke="currentColor" />
+      </svg>
+      {event.time}
+    </span>
+    <span class="flex items-center gap-1 text-gray-400">
+      <!-- Location Icon -->
+      <svg class="w-4 h-4 text-celeste_aimara" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 21c-4.418 0-8-6.418-8-10A8 8 0 0 1 20 11c0 3.582-3.582 10-8 10z" stroke="currentColor" fill="none"/>
+        <circle cx="12" cy="11" r="3" stroke="currentColor" />
+      </svg>
+      {event.location}
+    </span>
   </div>
-
-  <p class="text-gray-700 mb-6 text-sm line-clamp-3">{event.description}</p>
-
-
-  <div class="border-t border-celeste_aimara/40 pt-4 mt-auto">
-    <h3 class="text-base font-semibold text-celeste_aimara mb-2">Organizer</h3>
-    <ul class="space-y-1 text-gray-700 text-sm list-disc pl-5">
+  
+  <!-- Organizadores -->
+  <div class="border-t border-celeste_aimara/20 pt-3 mt-auto">
+    <h3 class="text-sm font-semibold text-celeste_aimara mb-1 mt-1">Organizer</h3>
+    <ul class="space-y-1 text-gray-600 text-sm list-disc pl-5">
       {event.organizers.map(org => <li>{org}</li>)}
     </ul>
-    <div class="mt-6 flex">
+    <div class="flex justify-end mt-4">
       <a href={event.registration.url}
-        class="px-7 py-2 rounded-full text-sm font-medium border border-celeste_aimara text-celeste_aimara bg-white transition hover:bg-celeste_aimara hover:text-black ml-auto">
-        See more
+         class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-black text-black bg-white transition hover:bg-black hover:text-white hover:border-black">
+        <span>See more</span>
+        <!-- Icono flecha derecha -->
       </a>
     </div>
   </div>

@@ -4,8 +4,8 @@ export const TEAM_MEMBERS = [
         name: 'Wilbur N. Chiuyari Veramendi',
         role: 'Image Processing | Computer Vision',
         category: 'activo',
-        description: 'PhD student in Computer Science at ICMC-USP (Brazil), researching on mobile robotics and computer vision.',
-        avatar: '/team/wilbur.jpeg',
+        description: 'PhD student in Computer Science at ICMC-USP (Brazil).',
+        avatar: '/team/wilbur.png',
         social: {
           email: 'nike.codeux@gmail.com',
           facebook: 'https://www.facebook.com/nike.codeux',
@@ -16,7 +16,7 @@ export const TEAM_MEMBERS = [
         name: 'Honorio Apaza',
         role: 'Computer Science | NLP',
         category: 'fundador',
-        description: 'LQA Reviewer at Venga Global (USA), extraordinary professor at the UNAM (Peru), Candidate for a Master´s degree in Computer Science at UNSA, Natural Language Processing Researcher.',
+        description: 'IEEE Senior Member | Computer Science | NLP Researcher',
         avatar: '/team/honorio.png',
         social: {
           facebook: 'https://www.facebook.com/01001000.01A',
@@ -30,8 +30,8 @@ export const TEAM_MEMBERS = [
         name: 'Mariela Nina',
         role: 'Student | Frontend',
         category: 'activo',
-        description: 'Master’s student in Computer Science at UNIFESP, Brazil, with a background in Systems Engineering from UNAM (Peru). Passionate about AI, Machine Learning, and NLP, specializing in automatic translation and chatbot development.',
-        avatar: '/team/Mariela.jpg',
+        description: 'Master’s student in Computer Science at UNIFESP, Brazil.',
+        avatar: '/team/mariela.png',
         social: {
           email: '/',
           facebook: '/',
@@ -42,7 +42,7 @@ export const TEAM_MEMBERS = [
         name: 'Elmer Collanqui',
         role: 'Student | Frontend',
         category: 'fundador',
-        description: 'Student at the Professional School of Systems and Informatics Engineering at UNAM, and junior researcher with publications in IEEE conferences, focused on natural language processing.',
+        description: 'Student of Systems and Informatics Engineering at UNAM.',
         avatar: '/team/elmer.png',
         social: {
           email: '/',
@@ -54,8 +54,8 @@ export const TEAM_MEMBERS = [
         name: 'Yoselin Arocutipa',
         role: 'Student | Marketing Leader',
         category: 'activo',
-        description: 'Student at the Professional School of Systems and Informatics Engineering, UNAM, and junior researcher with publications in IEEE conferences, focused on computer vision.',
-        avatar: '/team/yoselin.jpg',
+        description: 'Graduate of Systems Engineering and Computer Science from UNAM',
+        avatar: '/team/yoselin.png',
         social: {
           email: '/',
           facebook: '/',
@@ -66,8 +66,8 @@ export const TEAM_MEMBERS = [
         name: 'Jamir Balcona',
         role: 'Student | Frontend',
         category: 'activo',
-        description: 'Student at the Professional School of Systems and Informatics Engineering, UNAM, and junior researcher with publications in IEEE conferences, focused on natural language processing.',
-        avatar: '/team/jamir.jpeg',
+        description: 'Graduate of Systems Engineering and Computer Science from UNAM.',
+        avatar: '/team/jamir.png',
         social: {
           email: 'jamir02viza@gmail.com',
           facebook: 'https://www.facebook.com/jamiredu.balcona/',
@@ -79,7 +79,7 @@ export const TEAM_MEMBERS = [
         name: 'Allison Reynoso',
         role: 'Student | Image processing',
         category: 'activo',
-        description: 'President of the IEEE Student Branch at UNAM, junior researcher with publications in IEEE conferences, focused on natural language processing (NLP) and computer vision.',
+        description: 'Graduate of Systems Engineering and Computer Science from UNAM.',
         avatar: '/team/allison.png',
         social: {
           email: '/',
@@ -91,8 +91,8 @@ export const TEAM_MEMBERS = [
         name: 'Seline Maquera',
         role: 'Student | Logistic leader',
         category: 'activo',
-        description: 'Student at the Professional School of Systems and Informatics Engineering, UNAM, and junior researcher with publications in IEEE conferences, focused on computer vision.',
-        avatar: '/team/selin.jpg',
+        description: 'Graduate of Systems Engineering and Computer Science from UNAM.',
+        avatar: '/team/seline.png',
         social: {
           email: '/',
           facebook: '/',
@@ -103,7 +103,7 @@ export const TEAM_MEMBERS = [
         name: 'Frank Ruiz',
         role: 'Student | Image processing',
         category: 'activo',
-        description: 'Outstanding student of the Professional School of Systems and Informatics Engineering, National University of Moquegua, Ilo, Peru.',
+        description: 'Outstanding student of Systems and Informatics Engineering, UNAM.',
         avatar: '/team/frank.png',
         social: {
           email: '/',
@@ -115,8 +115,8 @@ export const TEAM_MEMBERS = [
         name: 'Edward Rocca',
         role: 'Student | Estudiante destacado',
         category: 'activo',
-        description: 'Student at the Professional School of Systems and Informatics Engineering, UNAM, and junior researcher with publications in IEEE conferences, focused on computer vision.',
-        avatar: '/team/eduard.png',
+        description: 'Student of Systems and Informatics Engineering, UNAM.',
+        avatar: '/team/edward.png',
         social: {
           email: '/',
           facebook: '/',
@@ -127,7 +127,7 @@ export const TEAM_MEMBERS = [
         name: 'Jose Paye',
         role: 'Student | Full Stack',
         category: 'activo',
-        description: 'Student at the Professional School of Systems and Informatics Engineering, UNAM, full stack developer.',
+        description: 'Student of Systems and Informatics Engineering, UNAM.',
         avatar: '/team/jose.png',
         portfolio: "test",
         social: {
@@ -141,7 +141,7 @@ export const TEAM_MEMBERS = [
         name: 'Américo Rubín de Celis Vidal',
         role: 'PhD. en Ingeniería Eléctrica',
         category: 'honorario',
-        description: 'PhD in Electrical Engineering from the Pontifical Catholic University of Rio de Janeiro. Former researcher at the Telecommunications Studies Center.',
+        description: 'PhD in Electrical Engineering from the Pontifical Catholic University of Brazil. ',
         avatar: '/team/americo.jpg',
         social: {
           facebook: '#',
@@ -155,8 +155,8 @@ export const TEAM_MEMBERS = [
         name: 'Carlos Silva Delgado',
         role: 'Docente Universitario',
         category: 'colaborador',
-        description: 'Principal professor affiliated with the Department of Systems and Informatics Engineering, Faculty of Engineering and Architecture, UNAM(Peru).',
-        avatar: '/team/carlos_silva.jpeg',
+        description: 'Principal professor affiliated at DAISI of UNAM.',
+        avatar: '/team/carlos.png',
         social: {
           email: '/',
           facebook: '/',
@@ -167,7 +167,7 @@ export const TEAM_MEMBERS = [
         name: 'Victor Yana Mamani',
         role: 'Docente Universitario',
         category: 'fundador',
-        description: 'Professor affiliated with the Department of Systems and Informatics Engineering, Faculty of Engineering and Architecture, UNAM(Peru).',
+        description: 'Professor affiliated at DAISI of UNAM.',
         avatar: '/team/victor.png',
         social: {
           email: '/',
@@ -179,8 +179,8 @@ export const TEAM_MEMBERS = [
         name: 'Maribel Coaguila',
         role: 'Docente Universitario',
         category: 'colaborador',
-        description: 'Master´s in Systems and Informatics Engineering, and in Information Security, as well as in Business Administration and Management. Professor at the Professional School of Systems and Informatics Engineering at UNAM.',
-        avatar: '/team/maribel.jpg',
+        description: 'Professor affiliated at DAISI of UNAM.',
+        avatar: '/team/maribel.png',
         social: {
           email: '/',
           facebook: '/',
