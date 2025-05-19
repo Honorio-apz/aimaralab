@@ -4,14 +4,9 @@ import { ChevronLeft, ChevronRight, Facebook, Linkedin } from 'lucide-react';
 const images = [
   "fotos/foto10-min.png",
   "fotos/foto14-min.png",
-  "fotos/foto2.jpg",
-  "fotos/foto18-min.png",
   "fotos/foto19-min.png",
-  "fotos/foto5.jpg",
   "fotos/foto21-min.png",
   "fotos/foto7.jpg",
-  "fotos/foto8.jpg",
-  "fotos/foto9-min.png",
   "fotos/foto11-min.png",
   "fotos/foto12-min.png",
 ];
