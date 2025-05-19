@@ -1,9 +1,7 @@
 ---
 import { GALLERY_IMAGES } from '../../data/galleryImages.js'; // Cambia la ruta si es necesario
 ---
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
-</head>
+
 <section class="bg-gray-50 w-full py-16 px-4">
   <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
     <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto">
@@ -57,45 +55,3 @@ import { GALLERY_IMAGES } from '../../data/galleryImages.js'; // Cambia la ruta 
   </div>
 </div>
 
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const imageItems = document.querySelectorAll('.image-item');
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const closeModalBtn = document.getElementById('closeModal');
-
-    function openModal(imageSrc) {
-      modalImage.src = imageSrc;
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.classList.add('hidden');
-      modalImage.src = '';
-      document.body.style.overflow = 'auto';
-    }
-
-    imageItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const imageSrc = item.getAttribute('data-src');
-        openModal(imageSrc);
-      });
-    });
-
-    closeModalBtn.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        closeModal();
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeModal();
-      }
-    });
-  });
-</script>
