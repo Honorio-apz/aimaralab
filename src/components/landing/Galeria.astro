@@ -1,71 +1,40 @@
 ---
-import 'photoswipe/style.css';
-import { Image } from 'astro:assets';
-
-// Define the image paths and details
-const galleryImages = [
-  { href: '/fotos/foto1.jpg', src: '/fotos/foto1.jpg' },
-  { href: '/fotos/foto2.jpg', src: '/fotos/foto2.jpg' },
-  { href: '/fotos/foto3.jpg', src: '/fotos/foto3.jpg' },
-  { href: '/fotos/foto4.jpg', src: '/fotos/foto4.jpg' },
-  { href: '/fotos/foto5.jpg', src: '/fotos/foto5.jpg' },
-  { href: '/fotos/foto6.jpg', src: '/fotos/foto6.jpg' },
-  { href: '/fotos/foto7.jpg', src: '/fotos/foto7.jpg' },
-  { href: '/fotos/foto8.jpg', src: '/fotos/foto8.jpg' },
-  { href: '/fotos/foto9-min.png', src: '/fotos/foto9-min.png' },
-  { href: '/fotos/foto10-min.png', src: '/fotos/foto10-min.png' },
-  { href: '/fotos/foto11-min.png', src: '/fotos/foto11-min.png' },
-  { href: '/fotos/foto12-min.png', src: '/fotos/foto12-min.png' },
-  { href: '/fotos/foto13-min.png', src: '/fotos/foto13-min.png' },
-  { href: '/fotos/foto14-min.png', src: '/fotos/foto14-min.png' },
-  { href: '/fotos/foto15-min.png', src: '/fotos/foto15-min.png' },
-  { href: '/fotos/foto16-min.png', src: '/fotos/foto16-min.png' },
-  { href: '/fotos/foto17-min.png', src: '/fotos/foto17-min.png' },
-  { href: '/fotos/foto18-min.png', src: '/fotos/foto18-min.png' },
-  { href: '/fotos/foto19-min.png', src: '/fotos/foto19-min.png' },
-  { href: '/fotos/foto21-min.png', src: '/fotos/foto21-min.png' },
-];
+import { GALLERY_IMAGES } from '../../data/galleryImages.js'; // Cambia la ruta si es necesario
 ---
-
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-
-<section id="acerca_de_nosotros" class="g-gradient-to-b w-full">
-  <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12 g-gradient-to-b flex flex-col items-center"> 
-    <h1 class="text-3xl font-roboto tracking-tight text-gray-900 sm:text-3xl">Gallery</h1>
-    <div class="border-b border-celeste_aimara w-1/2 mt-4"></div>
-    <br>
-    <p class="text-base text-gray-600 mb-8 text-center">
-      As a group, we participate in and organize various activities related to Artificial Intelligence and Computer Science, as well as share fraternal moments to strengthen our bonds and exchange ideas and experiences.
+<section class="bg-gray-50 w-full py-16 px-4">
+  <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
+    <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto">
+      AiMara Lab Gallery
+    </h1>
+    <!-- Subrayado removido -->
+    <h2 class="text-xl font-light text-gray-500 mb-6 font-roboto">
+      Memories, Activities & Achievements
+    </h2>
+    <p class="text-base text-gray-600 font-normal leading-relaxed max-w-2xl">
+      Explore a selection of our most memorable moments, research activities, workshops, and team experiences. The AiMara Lab Gallery highlights our commitment to collaboration, learning, and innovation in artificial intelligence and technology.
     </p>
   </div>
 </section>
 
-<div class="w-full mx-auto bg-gray-1 pt-4 pb-4 mt-0" id="galeria">
-  <div class="w-3/4 mx-auto mt-0">
-    <div class="grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible">
-      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {galleryImages.map((image, index) => (
-          <div>
-            <div 
-              class="image-item cursor-pointer"
-              data-src={image.href}
-            >
-              <Image
-                src={image.src}
-                alt={`Gallery image ${index + 1}`}
-                width={600}
-                height={400}
-                class="object-cover object-center h-40 max-w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
-              />
-            </div>
-          </div>
-        ))}
+<section class="max-w-7xl mx-auto px-4 py-8">
+  
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {GALLERY_IMAGES.map((img, i) => (
+      <div>
+        <div class="image-item cursor-pointer" data-src={img.href}>
+          <img
+            src={img.src}
+            alt={`Foto ${i + 1}`}
+            class="object-cover object-center h-40 w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+          />
+        </div>
       </div>
-    </div>
+    ))}
   </div>
-</div>
+</section>
 
 <!-- Modal para visualización de imágenes -->
 <div 
@@ -88,86 +57,45 @@ const galleryImages = [
   </div>
 </div>
 
+
 <script>
-  // Ensure the script runs after the DOM is fully loaded
   document.addEventListener('DOMContentLoaded', () => {
-    // Select all elements to ensure they're available
     const imageItems = document.querySelectorAll('.image-item');
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const closeModalBtn = document.getElementById('closeModal');
 
-    // Function to open the modal
     function openModal(imageSrc) {
-      // Ensure the image source is set before showing the modal
       modalImage.src = imageSrc;
-      
-      // Use a small timeout to ensure image is loaded
-      setTimeout(() => {
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }, 50);
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
     }
 
-    // Function to close the modal
     function closeModal() {
       modal.classList.add('hidden');
       modalImage.src = '';
       document.body.style.overflow = 'auto';
     }
 
-    // Add event listeners with extra safety
-    function addModalListeners() {
-      // Remove existing listeners first to prevent multiple bindings
-      imageItems.forEach(item => {
-        item.removeEventListener('click', imageClickHandler);
-        item.addEventListener('click', imageClickHandler);
-      });
-
-      function imageClickHandler(event) {
-        const imageSrc = event.currentTarget.getAttribute('data-src');
+    imageItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const imageSrc = item.getAttribute('data-src');
         openModal(imageSrc);
+      });
+    });
+
+    closeModalBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
       }
+    });
 
-      // Ensure close button listener
-      closeModalBtn.removeEventListener('click', closeModal);
-      closeModalBtn.addEventListener('click', closeModal);
-
-      // Modal background close
-      modal.removeEventListener('click', modalBackgroundCloseHandler);
-      modal.addEventListener('click', modalBackgroundCloseHandler);
-
-      function modalBackgroundCloseHandler(event) {
-        if (event.target === modal) {
-          closeModal();
-        }
-      }
-    }
-
-    // Initial setup of listeners
-    addModalListeners();
-
-    // Escape key handler
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
         closeModal();
       }
     });
-
-    // Optional: Re-add listeners if content is dynamically loaded
-    if (window.MutationObserver) {
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.addedNodes.length) {
-            addModalListeners();
-          }
-        });
-      });
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-    }
   });
 </script>

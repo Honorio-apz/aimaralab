@@ -1,9 +1,33 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Eventos_c from "../components/landing/Eventos_c.astro";
+import Evento from "../components/landing/resumenevento.astro";
+import { EVENTOS } from "../data/eventos.js";
 ---
-<BaseLayout title="Events">
+<BaseLayout title="Eventos">
 
-<Eventos_c/>
-
+<section class="bg-gray-50 w-full py-16 px-4">
+<div class="max-w-3xl mx-auto flex flex-col items-center text-center">
+      <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto">
+      AiMara Lab Events
+      </h1>
+      <h2 class="text-xl font-light text-gray-500 mb-6 font-roboto">
+      Symposiums, Workshops & Community
+      </h2>
+      <p class="text-base text-gray-600 font-normal leading-relaxed max-w-2xl">
+      Discover our upcoming and past events—symposiums, workshops, and collaborative activities—where we connect researchers, students, and professionals to exchange knowledge and drive innovation in artificial intelligence. Join us to be part of our growing AI community!
+      </p>
+</div>
+</section>
+<br>
+<br>  
+  <section class="w-full min-h-screen bg-white pt-8 pb-24 ">
+    
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        {EVENTOS.map(evento => (
+          <Evento event={evento} />
+        ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

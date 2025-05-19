@@ -8,6 +8,7 @@ interface Props {
 }
 
 const {title} = Astro.props;
+
 ---
 <html
   lang="en"
@@ -17,6 +18,9 @@ const {title} = Astro.props;
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width"/>
   <link rel="icon" type="image/svg+xml" href="logo_AIMara.ico"/>
+  <script src="/nav.js" defer></script>
+  <script src="/gallery.js" defer></script>
+
   <title>{title}</title>
   <BaseHead />
   <ViewTransitions />
