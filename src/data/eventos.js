@@ -24,20 +24,20 @@ export const EVENTOS = [
     speakers: [
       {
         name: "Dr. Pedro Shiguihara",
-        bio: "Investigador en IA, Universidad X.",
-        topic: "Redes Neuronales Modernas",
+        bio: "St. Ignatius of Loyola University",
+        topic: "Análisis de Características MGC y UGC para Estimar Nivel de Aceptación en el sector Inmobiliario",
         photo: "../../speackers/pedro.png"
       },
       {
         name: "Msc. Honorio Apaza",
-        bio: "Ingeniera de Datos, Empresa Y.",
-        topic: "IA para el Sector Público",
+        bio: "National University of Moquegua ",
+        topic: "Modelos Neuronales de Traducción Automatica para las Lenguas Nativas",
         photo: "../../speackers/honorio.png"
       },
       {
         name: "Dr. Anibal Flores",
-        bio: "Ingeniera de Datos, Empresa Y.",
-        topic: "IA para el Sector Público",
+        bio: "Principal Professor at National University of Moquegua",
+        topic: "Estudio Infodemiológico de Covid-19 Usando Minería de Datos y Procesamiento de Lenguaje Natural",
         photo: "../../speackers/anibalflores.jpeg"
       }
     ]
