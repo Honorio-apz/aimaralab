@@ -25,19 +25,19 @@ export const EVENTOS = [
       {
         name: "Dr. Pedro Shiguihara",
         bio: "St. Ignatius of Loyola University",
-        topic: "Análisis de Características MGC y UGC para Estimar Nivel de Aceptación en el sector Inmobiliario",
+        topic: "Data Science, Machine Learning, Probabilistic Graphical Models, BioNLP",
         photo: "../../speackers/pedro.png"
       },
       {
         name: "Msc. Honorio Apaza",
         bio: "National University of Moquegua ",
-        topic: "Modelos Neuronales de Traducción Automatica para las Lenguas Nativas",
+        topic: "IEEE Senior Member | LQA Reviewer at Venga Global | Professor at UNAM",
         photo: "../../speackers/honorio.png"
       },
       {
         name: "Dr. Anibal Flores",
-        bio: "Principal Professor at National University of Moquegua",
-        topic: "Estudio Infodemiológico de Covid-19 Usando Minería de Datos y Procesamiento de Lenguaje Natural",
+        bio: "National University of Moquegua",
+        topic: "Principal Professor | IA Researcher",
         photo: "../../speackers/anibalflores.jpeg"
       }
     ]
