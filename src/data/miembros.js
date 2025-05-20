@@ -51,6 +51,18 @@ export const TEAM_MEMBERS = [
         }
       },
       {
+        name: 'Sofia Yamilet Quispe Salas',
+        role: ' ',
+        category: 'activo',
+        description: 'Graduate of Systems Engineering and Computer Science from UNAM',
+        avatar: '/team/sofia.png',
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
+        }
+      },
+      {
         name: 'Yoselin Arocutipa',
         role: 'Student | Marketing Leader',
         category: 'activo',
@@ -138,11 +150,50 @@ export const TEAM_MEMBERS = [
       },
       // -- HONORARIO
       {
+        name: 'José Eduardo Ochoa Luna',
+        role: ' ',
+        category: 'honorario',
+        description: 'Ph.D. in Science Engineering School at the University of São Paulo, Brazil ',
+        avatar: '/team/joseochoa.png',
+        social: {
+          facebook: '#',
+          email: 'example@example.com',
+          linkedin: '#',
+          twitter: '#'
+        }
+      },
+      {
         name: 'Américo Rubín de Celis Vidal',
         role: 'PhD. en Ingeniería Eléctrica',
         category: 'honorario',
         description: 'PhD in Electrical Engineering from the Pontifical Catholic University of Brazil. ',
         avatar: '/team/americo.jpg',
+        social: {
+          facebook: '#',
+          email: 'example@example.com',
+          linkedin: '#',
+          twitter: '#'
+        }
+      },
+      {
+        name: 'Anibal Fernando Flores García',
+        role: ' ',
+        category: 'colaborador',
+        description: 'PhD in Computer Science at UNSA. ',
+        avatar: '/team/anibalflores.jpeg',
+        social: {
+          facebook: '#',
+          email: 'example@example.com',
+          linkedin: '#',
+          twitter: '#'
+        }
+      },
+      {
+        name: 'Euler Tito Chura',
+        role: 'PhD. en Ingeniería Eléctrica',
+        category: 'colaborador',
+        description: 'Researcher of Artificial Intelligence at UNAM. ',
+        avatar: '/team/eulertito.jpeg',
         social: {
           facebook: '#',
           email: 'example@example.com',
