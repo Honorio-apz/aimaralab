@@ -42,7 +42,7 @@ export const TEAM_MEMBERS = [
         name: 'Elmer Collanqui',
         role: 'Student | Frontend',
         category: 'fundador',
-        description: 'Student of Systems and Informatics Engineering at UNAM.',
+        description: 'RAG/NLP researcher | Student of Engineering and Computer Science.',
         avatar: '/team/elmer.png',
         social: {
           email: '/',
@@ -218,7 +218,7 @@ export const TEAM_MEMBERS = [
         name: 'Victor Yana Mamani',
         role: 'Docente Universitario',
         category: 'fundador',
-        description: 'Professor affiliated at DAISI of UNAM.',
+        description: 'Master in Business Management | Professor at DAISI of UNAM.',
         avatar: '/team/victor.png',
         social: {
           email: '/',
