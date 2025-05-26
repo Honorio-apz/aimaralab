@@ -27,14 +27,51 @@ export const TEAM_MEMBERS = [
           linkedin: '/'
         }
       },
+      {
+        name: 'Allison Reynoso',
+        role: 'Student | Image processing',
+        category: 'activo',
+        description: 'Researcher of handwritten text recognition (HTR) for aimara.',
+        avatar: '/team/allison.png',
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
+        }
+      },
        
       {
-        name: 'Jose Paye',
-        role: 'Student | Full Stack',
+        name: 'Yoselin Arocutipa',
+        role: 'Student | Marketing Leader',
         category: 'activo',
-        description: 'Student of Systems and Informatics Engineering, UNAM.',
-        avatar: '/team/jose.png',
-        portfolio: "test",
+        description: 'Graduate of Systems Engineering and Computer Science from UNAM',
+        avatar: '/team/yoselin.png',
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
+        }
+      },
+      {
+        name: 'Jamir Balcona',
+        role: 'Student | Frontend',
+        category: 'activo',
+        description: 'Researcher of Augmented Generation Techniques Applied to Chatbots.',
+        avatar: '/team/jamir.png',
+        social: {
+          email: 'jamir02viza@gmail.com',
+          facebook: 'https://www.facebook.com/jamiredu.balcona/',
+          linkedin: 'https://www.linkedin.com/in/jamir-balcona-viza-80826a218/'
+        },
+        portfolio: "test"
+      },
+      
+      {
+        name: 'Seline Maquera',
+        role: 'Student | Logistic leader',
+        category: 'activo',
+        description: 'Researcher of Peruvian Sign Recognition (LSP) to Quechua',
+        avatar: '/team/seline.png',
         social: {
           email: '/',
           facebook: '/',
@@ -53,6 +90,49 @@ export const TEAM_MEMBERS = [
           linkedin: '/'
         }
       },
+      {
+        name: 'Edward Rocca',
+        role: 'Student | Estudiante destacado',
+        category: 'activo',
+        description: 'Student of Systems and Informatics Engineering, UNAM.',
+        avatar: '/team/edward.png',
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
+        }
+      },
+      {
+        name: 'Jose Paye',
+        role: 'Student | Full Stack',
+        category: 'activo',
+        description: 'Student of Systems and Informatics Engineering, UNAM.',
+        avatar: '/team/jose.png',
+        portfolio: "test",
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       
       // -- HONORARIO
       {
@@ -119,6 +199,31 @@ export const TEAM_MEMBERS = [
           email: 'example@example.com',
           linkedin: '#',
           twitter: '#'
+        }
+      },
+      {
+        name: 'Carlos Silva Delgado',
+        role: 'Docente Universitario',
+        category: 'colaborador',
+        description: 'Principal professor affiliated at DAISI of UNAM.',
+        avatar: '/team/carlos.png',
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
+        }
+      },
+      
+      {
+        name: 'Maribel Coaguila',
+        role: 'Docente Universitario',
+        category: 'colaborador',
+        description: 'Professor affiliated at DAISI of UNAM.',
+        avatar: '/team/maribel.png',
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
         }
       },
       
