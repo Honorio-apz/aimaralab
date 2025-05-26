@@ -2,13 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Facebook, Linkedin } from 'lucide-react';
 
 const images = [
+  "fotos/foto4.jpg",
+  "fotos/foto5.jpg",
+  "fotos/foto8.jpg",
   "fotos/foto10-min.png",
   "fotos/foto14-min.png",
+  "fotos/foto15-min.png",
+  "fotos/foto16-min.png",
+  "fotos/foto17-min.png",
   "fotos/foto19-min.png",
   "fotos/foto21-min.png",
-  "fotos/foto7.jpg",
-  "fotos/foto11-min.png",
-  "fotos/foto12-min.png",
 ];
 
 // Puedes ajustar este valor para cambiar el tiempo entre transiciones automáticas (en milisegundos)
@@ -101,13 +104,19 @@ export default function CreativeCarousel() {
       </div>
 
       <div className="absolute bottom-4 right-4 bg-white/50 backdrop-blur-sm rounded-lg p-2 flex space-x-4">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-celeste_aimara hover:text-celeste_aimara/80 transition-colors">
-          <Facebook size={24} />
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-celeste_aimara hover:text-celeste_aimara/80 transition-colors">
+        <a href="https://pe.linkedin.com/company/aimaralab" target="_blank" rel="noopener noreferrer" className="text-celeste_aimara hover:text-celeste_aimara/80 transition-colors">
           <Linkedin size={24} />
         </a>
+        <a href="https://www.facebook.com/aimaralab" target="_blank" rel="noopener noreferrer" className="text-celeste_aimara hover:text-celeste_aimara/80 transition-colors">
+          <Facebook size={24} />
+        </a>
+        <a href="https://www.instagram.com/aimaralab" target="_blank" rel="noopener noreferrer" className="text-celeste_aimara hover:text-celeste_aimara/80 transition-colors">
+          <svg width={24} height={24} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 3A5.75 5.75 0 1 1 6.25 12 5.75 5.75 0 0 1 12 6.5zm0 1.5a4.25 4.25 0 1 0 4.25 4.25A4.25 4.25 0 0 0 12 8zm5.5-.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.5 7.75z"/>
+          </svg>
+        </a>
       </div>
+
     </div>
   );
 }
