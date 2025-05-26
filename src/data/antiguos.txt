@@ -1,4 +1,4 @@
-{
+      {
         name: 'Yoselin Arocutipa',
         role: 'Student | Marketing Leader',
         category: 'activo',
