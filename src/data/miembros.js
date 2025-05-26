@@ -41,6 +41,18 @@ export const TEAM_MEMBERS = [
           linkedin: '/'
         }
       },
+      {
+        name: 'Frank Ruiz',
+        role: 'Student | Image processing',
+        category: 'activo',
+        description: 'Outstanding student of Systems and Informatics Engineering, UNAM.',
+        avatar: '/team/frank.png',
+        social: {
+          email: '/',
+          facebook: '/',
+          linkedin: '/'
+        }
+      },
       
       // -- HONORARIO
       {
