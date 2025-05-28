@@ -19,7 +19,7 @@ export const EVENTOS = [
     ],
     registration: {
       url: "/eventos/nlp",
-      label: "Regístrate aquí"
+      label: "Register here"
     },
     speakers: [
       {

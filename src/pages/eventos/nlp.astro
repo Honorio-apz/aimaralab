@@ -20,7 +20,7 @@ const event = EVENTOS[0]; // Cambia el índice según el evento, o usa un campo 
       </div>
       <p class="text-base text-gray-700 mb-10">{event.description}</p>
       <div class="mb-10">
-        <h2 class="text-xl font-semibold text-celeste_aimara mb-4">Agenda</h2>
+        <h2 class="text-xl font-semibold text-celeste_aimara mb-4">Program</h2>
         <table class="min-w-full text-left text-sm border border-celeste_aimara/30 rounded-xl overflow-hidden mb-4">
           <tbody>
             {event.agenda.map(item => (
@@ -34,7 +34,7 @@ const event = EVENTOS[0]; // Cambia el índice según el evento, o usa un campo 
       </div>
       {event.speakers && event.speakers.length > 0 && (
         <div class="mb-10">
-          <h2 class="text-xl font-semibold text-celeste_aimara mb-4">Ponentes</h2>
+          <h2 class="text-xl font-semibold text-celeste_aimara mb-4">Speakers</h2>
           <div class="grid gap-6 md:grid-cols-2">
             {event.speakers.map(speaker => (
               <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 border border-celeste_aimara/20">
@@ -42,7 +42,7 @@ const event = EVENTOS[0]; // Cambia el índice según el evento, o usa un campo 
                 <div>
                   <div class="font-bold text-gray-900">{speaker.name}</div>
                   <div class="text-gray-700 text-sm">{speaker.bio}</div>
-                  <div class="text-gray-500 text-xs">Tema: {speaker.topic}</div>
+                  <div class="text-gray-500 text-xs">{speaker.topic}</div>
                 </div>
               </div>
             ))}
@@ -50,7 +50,7 @@ const event = EVENTOS[0]; // Cambia el índice según el evento, o usa un campo 
         </div>
       )}
       <div class="mb-10">
-        <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Organizan</h2>
+        <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Organicer </h2>
         <ul class="list-disc pl-6 text-gray-700 mb-3">
           {event.organizers.map(org => <li>{org}</li>)}
         </ul>
