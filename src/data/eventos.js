@@ -48,7 +48,11 @@ export const EVENTOS = [
       { name: "IINDEP UNAM", logo: "../../public/logo/logo_unam.png" }
     ],
     registration: {
-      url: "https://forms.gle/tSAZV6sRYACAdcSu8",
+      url: "/eventos/aimara2025",
+      label: "Register here"
+    },
+    registration2: {
+      url: "https://forms.gle/2seppm2JE6BDN25o6",
       label: "Register here"
     },
     speakers: [
