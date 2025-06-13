@@ -43,9 +43,9 @@ export const EVENTOS = [
       // ...más actividades
     ],
     organizers2: [
-      "../../public/logo/logo_color.png",
-      "../../public/logo/logo_episi.png",
-      "../../public/logo/logo_unam.png"
+      "../../portada_eventos/aimara2025.png",
+      "../../portada_eventos/aimara2025.png",
+      "../../portada_eventos/aimara2025.png"
     ],
     registration: {
       url: "/eventos/aimara2025",

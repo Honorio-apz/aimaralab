@@ -160,25 +160,22 @@ const organizers = (event.organizers2 || []).map((logoPath, index) => ({
         </div>
       )}
       
+      
       <div class="mb-10">
-        <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Organicer </h2>
-        <br>
-        <div class="mb-10">
-          <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Organicer</h2>
-          <br />
-          <div class="flex flex-wrap gap-4 items-center mb-6">
-            {organizers.map(org => (
-              <img
-                src={org.logo}
-                alt={org.name}
-                title={org.name}
-                class="h-16 object-contain rounded shadow-sm p-2 bg-white border"
-              />
-            ))}
-          </div>
+        <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Organicer</h2>
+        <br />
+        <div class="flex flex-wrap gap-4 items-center mb-6">
+          {organizers.map(org => (
+            <img
+              src={org.logo}
+              alt={org.name}
+              title={org.name}
+              class="h-16 object-contain rounded shadow-sm p-2 bg-white border"
+            />
+          ))}
         </div>
-
       </div>
+
 
       <div class="mb-10">
         <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Location </h2>
