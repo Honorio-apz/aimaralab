@@ -123,17 +123,17 @@ const organizers = (event.organizers2 || []).map((logoPath, index) => ({
         </div>
       </div>
       <div class="mb-10">
-        <h2 class="text-xl font-semibold text-celeste_aimara mb-4">Taller (11 July)</h2>
+        
         <div class="rounded-xl border border-celeste_aimara/30 overflow-hidden shadow-sm mb-4 bg-white">
           <table class="min-w-full text-left text-sm">
             <tbody>
               {event.taller.map(item => (
-                <tr class="hover:bg-celeste_aimara/5 transition">
+                <tr class=" hover:bg-celeste_aimara/5 transition">
                   <td class="py-3 px-4 font-semibold whitespace-nowrap">{item.hour}</td>
                   <td class="py-3 px-4 text-gray-800">
                     <div class="font-medium">{item.activity}</div>
                     {item.speaker && (
-                      <div class="text-sm text-gray-500 mt-1">By: <span class="font-semibold">{item.speaker}</span></div>
+                      <div class="text-sm text-gray-500 mt-1">By <span class="font-semibold">{item.speaker}</span></div>
                     )}
                   </td>
                 </tr>

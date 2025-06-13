@@ -12,34 +12,34 @@ export const EVENTOS = [
     description: "AiMARA SUMMIT 2025 – Artificial Intelligence Meeting for Applied Research in the Americas is an academic event aimed at bringing artificial intelligence closer to students, educators, and professionals in the southern region of the country through lectures, hands-on workshops, and interactions with national and international experts, fostering education, innovation, and the growth of an active AI community.",
     agenda: [
       {
-        hour: "15:00 – 15:30",
+        hour: "10 july | 15:00 – 15:30",
         activity: "Registration.",
         speaker: "Organicer."
       },
       {
-        hour: "15:30 – 16:15",
+        hour: "10 july | 15:30 – 16:15", 
         activity: "To be confirmed.",
         speaker: "To be confirmed."
       },
       {
-        hour: "16:15 – 17:00",
+        hour: "10 july | 16:15 – 17:00",
         activity: "Presentation topic: to be announced...",
         speaker: "Israel Chaparro"
       },
       {
-        hour: "17:00 – 17:20",
+        hour: "10 july | 17:00 – 17:20",
         activity: "[Coffee Break]"
       },
       {
-        hour: "17:20 – 18:30",
+        hour: "10 july | 17:20 – 18:30",
         activity: "Comparando Humanos y Sistemas de Inteligencia Artificial en el contexto de Conducción Autónoma con data de Perú.",
         speaker: "Arturo Deza"
       }
       // ...más actividades
     ],
     taller: [
-      { hour: "09:00 – 12:00", activity: "Fundamentos de Deep Learning (NVIDIA DLI Workshop)" , speaker: "Israel Chaparro"},
-      { hour: "14:00 – 18:00", activity: "Entrenando Redes Neuronales para clasificar imagenes" , speaker: "Arturo Deza"},
+      { hour: "11 july | 09:00 – 12:00", activity: "Taller: Fundamentos de Deep Learning (NVIDIA DLI Workshop)" , speaker: "Israel Chaparro"},
+      { hour: "11 july | 14:00 – 18:00", activity: "Taller: Entrenando Redes Neuronales para clasificar imagenes" , speaker: "Arturo Deza"},
       // ...más actividades
     ],
     organizers2: [
