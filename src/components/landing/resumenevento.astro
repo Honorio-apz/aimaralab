@@ -44,11 +44,15 @@ const { event } = Astro.props;
   </div>
   
   <!-- Organizadores -->
+  
+    
+    <!--
   <div class="border-t border-celeste_aimara/20 pt-3 mt-auto">
     <h3 class="text-sm font-semibold text-celeste_aimara mb-1 mt-1">Organizer</h3>
     <ul class="space-y-1 text-gray-600 text-sm list-disc pl-5">
       {event.organizers.map(org => <li>{org}</li>)}
     </ul>
+     -->
     <div class="flex justify-end mt-4">
       <a href={event.registration.url}
          class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-black text-black bg-white transition hover:bg-black hover:text-white hover:border-black">
@@ -56,5 +60,5 @@ const { event } = Astro.props;
         <!-- Icono flecha derecha -->
       </a>
     </div>
-  </div>
+  <!--</div> -->
 </article>
