@@ -42,10 +42,10 @@ export const EVENTOS = [
       { hour: "14:00 – 18:00", activity: "Entrenando Redes Neuronales para clasificar imagenes" , speaker: "Arturo Deza"},
       // ...más actividades
     ],
-    organizers: [
-      { name: "AiMara Lab", logo: "../../public/logo/logo_color.png" },
-      { name: "Grupo de investigacion de IA", logo: "../../public/logo/logo_episi.png" },
-      { name: "IINDEP UNAM", logo: "../../public/logo/logo_unam.png" }
+    organizers2: [
+      "../../public/logo/logo_color.png",
+      "../../public/logo/logo_episi.png",
+      "../../public/logo/logo_unam.png"
     ],
     registration: {
       url: "/eventos/aimara2025",

@@ -2,6 +2,12 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { EVENTOS } from "../../data/eventos.js";
 const event = EVENTOS[0]; // Cambia el índice según el evento, o usa un campo dinámico
+
+// Adaptar organizers2 (array de strings) a objetos con logo y nombre
+const organizers = (event.organizers2 || []).map((logoPath, index) => ({
+  logo: logoPath,
+  name: `Organizador ${index + 1}`
+}));
 ---
 <BaseLayout title={event.title}>
   <main class="min-h-screen bg-white">
@@ -157,10 +163,19 @@ const event = EVENTOS[0]; // Cambia el índice según el evento, o usa un campo 
       <div class="mb-10">
         <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Organicer </h2>
         <br>
-        <div class="flex flex-wrap gap-4 items-center mb-6">
-          {event.organizers.map(org => (
-            <img src={org.logo} alt={org.name} title={org.name} class="h-16 object-contain rounded shadow-sm p-2 bg-white border" />
-          ))}
+        <div class="mb-10">
+          <h2 class="text-xl font-semibold text-celeste_aimara mb-2">Organicer</h2>
+          <br />
+          <div class="flex flex-wrap gap-4 items-center mb-6">
+            {organizers.map(org => (
+              <img
+                src={org.logo}
+                alt={org.name}
+                title={org.name}
+                class="h-16 object-contain rounded shadow-sm p-2 bg-white border"
+              />
+            ))}
+          </div>
         </div>
 
       </div>
