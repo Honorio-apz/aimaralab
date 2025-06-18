@@ -18,8 +18,8 @@ export const EVENTOS = [
       },
       {
         hour: "15:30 – 16:15", 
-        activity: "To be confirmed.",
-        speaker: "To be confirmed."
+        activity: "Presentation topic: to be announced...",
+        speaker: "Manuel Cifuentes"
       },
       {
         hour: "16:15 – 17:00",
@@ -57,16 +57,22 @@ export const EVENTOS = [
     },
     speakers: [
       {
-        name: "Ph.d. Arturo Deza",
+        name: "Arturo Deza",
         bio: "Co-Founder & CEO @ Artificio",
         topic: "Peruvian researcher and entrepreneur specializing in artificial intelligence, computer vision, and perceptual psychology. He is currently the CEO and Co-Founder of Artificia, an R&D company based in Lima focused on data and model licensing for the autonomous driving industry. He holds a Ph.D. in Dynamical Neuroscience from UCSB and has conducted postdoctoral research at MIT and Harvard University. Awarded the prestigious EB-1A Green Card for extraordinary scientific ability.",
         photo: "../../speackers/arturodeza.jpg"
       },
       {
-        name: "Ph.d. Israel Chaparro",
+        name: "Israel Chaparro",
         bio: "RENACYT | NVIDIA DLI Instructor & Ambassador ",
         topic: "Is a leading expert in Artificial Intelligence, Algorithms, and Deep Learning. As a Platinum Certified Instructor in NVIDIA’s Deep Learning Institute (DLI) Ambassador Program, he delivers free, instructor-led workshops that empower academic communities. His work as a researcher in Applied Data Science and Deep Learning reflects a strong commitment to advancing AI knowledge and making it accessible to all.",
         photo: "../../speackers/israelchaparro.jpeg"
+      },
+      {
+        name: "Manuel Cifuentes",
+        bio: "ML Engineer Trainee en CENIA ",
+        topic: "Aspiring engineer with solid experience in machine learning, data science, and computer science education. Currently part of the National Center for Artificial Intelligence (CENIA) in Chile, contributing to the Latam-GPT project by performing targeted web scraping and developing machine learning models to filter and process collected data effectively.",
+        photo: "../../speackers/manuelcifuentes.jpeg"
       }
     ]
   },
