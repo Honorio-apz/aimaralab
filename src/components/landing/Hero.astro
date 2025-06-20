@@ -1,5 +1,10 @@
 ---
 import CreativeCarousel from '../CreativeCarousel.jsx';
+
+const collaborators = [
+  { name: "Google Nonprofits ", logo: "../../logo/google.png" },
+  //{ name: "Centro Nacional de Inteligencia Artificial (Cenia) ", logo: "../../logo/logo_cenia.png" }
+];
 ---
 
 <html>
@@ -44,5 +49,23 @@ import CreativeCarousel from '../CreativeCarousel.jsx';
       </div>
       <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
     </div>
+
+    <!-- Colaboradores -->
+  <div class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center text-lg font-semibold text-gray-600 mb-6">Supported by</h2>
+      <div class="flex flex-wrap justify-center gap-8 items-center">
+        {collaborators.map(collab => (
+          <img
+            src={collab.logo}
+            alt={collab.name}
+            title={collab.name}
+            class="h-8 object-contain  hover:grayscale-0 transition duration-300" 
+          />
+        ))}<!--grayscale agregar para grisss-->
+      </div>
+    </div>
+  </div>
+
   </body>
 </html>
