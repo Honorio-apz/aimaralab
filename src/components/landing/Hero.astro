@@ -2,70 +2,60 @@
 import CreativeCarousel from '../CreativeCarousel.jsx';
 
 const collaborators = [
-  { name: "Google Nonprofits ", logo: "../../logo/google.png" },
-  //{ name: "Centro Nacional de Inteligencia Artificial (Cenia) ", logo: "../../logo/logo_cenia.png" }
+  { name: "Google Nonprofits", logo: "/logo/google.png" },
+  // { name: "Centro Nacional de Inteligencia Artificial (CENIA)", logo: "/logo/logo_cenia.png" }
 ];
 ---
 
-<html>
-  <!--
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
-  </head>
-  -->
-  <body class="h-full font-nunito">
-    <div class="relative isolate overflow-hidden g-gradient-to-b from-indigo-100/20"> <br>
-      <div class="container mx-auto max-w-8xl pb-24 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-12 lg:py-10 mt-0 mb-14">
-
-        <div class="px-6 lg:px-0 lg:pt-0">
-          <div class="mx-auto max-w-2xl">
-            <div class="max-w-lg">
-              <h1 class="mt-14 sm:mt-14 text-3xl font-roboto tracking-tight text-gray-900 sm:text-4xl">
-                Welcome to AiMara Lab!
-              </h1>
-              <p class="mt-4 text-lg text-na mx-auto text-celeste_aimara">
-                _____________
-              </p>
-              
-              <p class="mt-6 sm:text-base text-sm text-gray-600">
-                AiMara Lab is an independent, non-profit organization based in Peru dedicated to the development and application of Artificial Intelligence. We focus on creating ethical, socially impactful, and scientifically grounded AI solutions, combining innovation with real-world implementation and technological advancement.
-              </p>
-              <div class="mt-8 flex items-center space-x-4">
-                <a href="/about"
-                   class="block px-3 py-1 rounded-lg text-base font-medium text-black bg-white border border-black hover:bg-black hover:text-white transition-colors duration-200">
-                  See more
-                </a>
-                <a href="https://www.aimaralab.com/galeria" class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-150">
-                  Gallery →
-                </a>
-              </div>
-            </div>
+<html class="bg-white">
+  <body class="h-full font-nunito bg-white">
+    <!-- Hero Section -->
+    
+    <div class="relative isolate overflow-hidden bg-white">
+      <section class="container mx-auto max-w-8xl grid lg:grid-cols-2 gap-x-8 px-6 lg:px-12 py-16 sm:py-24">
+        
+        <!-- Text Content -->
+        <div class="max-w-2xl">
+          <h1 class="mt-14 sm:mt-14 text-3xl font-roboto tracking-tight text-gray-900 sm:text-4xl">
+            Welcome to AiMara Lab!
+          </h1>
+          <p class="mt-4 text-lg text-celeste_aimara">_____________</p>
+          <p class="mt-6 text-sm sm:text-base text-gray-600">
+            AiMara Lab is an independent, non-profit organization based in Peru dedicated to the development and application of Artificial Intelligence. We focus on creating ethical, socially impactful, and scientifically grounded AI solutions, combining innovation with real-world implementation and technological advancement.
+          </p>
+          <div class="mt-8 flex items-center space-x-4">
+            <a href="/about" class="px-3 py-1 rounded-lg text-base font-medium text-black bg-white border border-black hover:bg-black hover:text-white transition-colors duration-200">
+              See more
+            </a>
+            <a href="https://www.aimaralab.com/galeria" class="text-sm font-medium text-gray-700 hover:text-gray-900 transition">
+              Gallery →
+            </a>
           </div>
         </div>
 
-        <div class="mt-14 px-1 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-5 lg:w-screen">
+        <!-- Carousel Component -->
+        <div class="mt-14 sm:mt-24 md:max-w-2xl lg:mt-5 lg:w-full">
           <CreativeCarousel client:load />
         </div>
-      </div>
-      <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+
+      </section>
     </div>
 
-    <!-- Colaboradores -->
-  <div class="bg-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-center text-lg font-semibold text-gray-600 mb-6">Supported by</h2>
-      <div class="flex flex-wrap justify-center gap-8 items-center">
-        {collaborators.map(collab => (
-          <img
-            src={collab.logo}
-            alt={collab.name}
-            title={collab.name}
-            class="h-8 object-contain  hover:grayscale-0 transition duration-300" 
-          />
-        ))}<!--grayscale agregar para grisss-->
+    <!-- Collaborators Section -->
+    <section class="bg-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center text-lg font-semibold text-gray-600 mb-6">Supported by</h2>
+        <div class="flex flex-wrap justify-center items-center gap-8">
+          {collaborators.map(collab => (
+            <img
+              src={collab.logo}
+              alt={collab.name}
+              title={collab.name}
+              class="h-10 object-contain  hover:grayscale-0 transition duration-300 ease-in-out"
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </div>
-
+    </section>
   </body>
 </html>
