@@ -43,7 +43,7 @@ export const EVENTOS = [
       // ...más actividades
     ],
     organizers2: [
-      "../../portada_eventos/aimara.png",
+      "../../portada_eventos/aimaralab25.png",
       "../../portada_eventos/logo_episi.png",
       "../../portada_eventos/logo_unam.png"
     ],
