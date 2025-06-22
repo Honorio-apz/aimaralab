@@ -170,7 +170,7 @@ export const TEAM_MEMBERS = [
         category: 'fundador',
         description: 'RAG/NLP researcher | Student of Engineering and Computer Science.',
         avatar: '/team/elmer.png',
-        url:'https://pe.linkedin.com/in/elmer-collanqui-casapia-977325315'
+        url:'https://www.linkedin.com/in/elmer-andres-collanqui-casapia-977325315'
       },
       {
         name: 'Victor Yana',
