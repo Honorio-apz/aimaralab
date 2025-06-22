@@ -47,12 +47,20 @@ function miembrosPorCategoria(categoria) {
             {groupTitle}
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {members.map(({ name, description, avatar }) => (
-              <div class="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-start transition hover:border-black max-w-xs w-full mx-auto">
+            {members.map(({ name, description, avatar, url }) => (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`Go to profile of ${name}`}
+                aria-label={`Go to profile of ${name}`}
+                class="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-start transition-transform transform hover:scale-105 hover:border-gray-400 max-w-xs w-full mx-auto no-underline"
+
+              >
                 <img src={avatar} alt={name} class="w-full aspect-square object-cover rounded-xl mb-2" />
                 <h3 class="text-base font-bold text-black mb-1">{name}</h3>
                 <span class="text-sm text-gray-500">{description}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>

@@ -8,11 +8,7 @@ export const TEAM_MEMBERS = [
         category: 'activo',
         description: 'Master’s student in Computer Science at UNIFESP, Brazil.',
         avatar: '/team/mariela.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://pe.linkedin.com/in/marielanina'
       },
       
       {
@@ -21,11 +17,7 @@ export const TEAM_MEMBERS = [
         category: 'activo',
         description: 'Data scientist with a strong background in AI and BI.',
         avatar: '/team/sofia.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://pe.linkedin.com/in/sofia-quispe-salas'
       },
       {
         name: 'Allison Reynoso',
@@ -33,11 +25,7 @@ export const TEAM_MEMBERS = [
         category: 'activo',
         description: 'Researcher of handwritten text recognition (HTR) for aimara.',
         avatar: '/team/allison.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://pe.linkedin.com/in/allison-reynoso-serra-a1055221a'
       },
        
       {
@@ -46,11 +34,7 @@ export const TEAM_MEMBERS = [
         category: 'activo',
         description: 'Graduate of Systems Engineering and Computer Science from UNAM',
         avatar: '/team/yoselin.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://pe.linkedin.com/in/yoselin-arocutipa-lovon'
       },
       {
         name: 'Jamir Balcona',
@@ -58,12 +42,7 @@ export const TEAM_MEMBERS = [
         category: 'activo',
         description: 'Researcher of Augmented Generation Techniques Applied to Chatbots.',
         avatar: '/team/jamir.png',
-        social: {
-          email: 'jamir02viza@gmail.com',
-          facebook: 'https://www.facebook.com/jamiredu.balcona/',
-          linkedin: 'https://www.linkedin.com/in/jamir-balcona-viza-80826a218/'
-        },
-        portfolio: "test"
+        url:'https://pe.linkedin.com/in/jamir-balcona-viza-80826a218'
       },
       
       {
@@ -72,35 +51,21 @@ export const TEAM_MEMBERS = [
         category: 'activo',
         description: 'Researcher of Peruvian Sign Recognition (LSP) to Quechua',
         avatar: '/team/seline.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://pe.linkedin.com/in/seline-maciel-maquera-ortega-63b688280'
       },
       {
         name: 'Frank Ruiz',
         role: 'Student | Image processing',
         category: 'activo',
         description: 'Outstanding student of Systems and Informatics Engineering, UNAM.',
-        avatar: '/team/frank.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        avatar: '/team/frank.png'
       },
       {
         name: 'Edward Rocca',
         role: 'Student | Estudiante destacado',
         category: 'activo',
         description: 'Student of Systems and Informatics Engineering, UNAM.',
-        avatar: '/team/edward.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        avatar: '/team/edward.png'
       },
       {
         name: 'Jose Paye',
@@ -108,12 +73,7 @@ export const TEAM_MEMBERS = [
         category: 'activo',
         description: 'Student of Systems and Informatics Engineering, UNAM.',
         avatar: '/team/jose.png',
-        portfolio: "test",
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://pe.linkedin.com/in/zerok06'
       },
 
 
@@ -141,12 +101,7 @@ export const TEAM_MEMBERS = [
         category: 'honorario',
         description: 'Ph.D. in Science Engineering School at the University of São Paulo, Brazil ',
         avatar: '/team/joseochoa.png',
-        social: {
-          facebook: '#',
-          email: 'example@example.com',
-          linkedin: '#',
-          twitter: '#'
-        }
+        url:'https://www.linkedin.com/in/jos%C3%A9-eduardo-ochoa-luna-6451b78/'
       },
       {
         name: 'Américo Rubín de Celis',
@@ -154,12 +109,7 @@ export const TEAM_MEMBERS = [
         category: 'honorario',
         description: 'PhD in Electrical Engineering from the Pontifical Catholic University of Brazil. ',
         avatar: '/team/americo.jpg',
-        social: {
-          facebook: '#',
-          email: 'example@example.com',
-          linkedin: '#',
-          twitter: '#'
-        }
+        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=19542'
       },
       {
         name: 'Wilbur N. Chiuyari ',
@@ -167,11 +117,7 @@ export const TEAM_MEMBERS = [
         category: 'honorario',
         description: 'PhD student in Computer Science at ICMC-USP (Brazil).',
         avatar: '/team/wilbur.png',
-        social: {
-          email: 'nike.codeux@gmail.com',
-          facebook: 'https://www.facebook.com/nike.codeux',
-          linkedin: 'https://www.linkedin.com/in/wilbur-naike'
-        }
+        url:'https://br.linkedin.com/in/wilbur-naike'
       },
       // -- COLABORADORES (ejemplo)
 
@@ -181,12 +127,7 @@ export const TEAM_MEMBERS = [
         category: 'colaborador',
         description: 'PhD in Computer Science at UNSA, Artificial Intelligence researcher. ',
         avatar: '/team/anibalflores.jpeg',
-        social: {
-          facebook: '#',
-          email: 'example@example.com',
-          linkedin: '#',
-          twitter: '#'
-        }
+        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=0071481'
       },
       {
         name: 'Euler Tito Chura',
@@ -194,12 +135,7 @@ export const TEAM_MEMBERS = [
         category: 'colaborador',
         description: 'Artificial Intelligence Researcher and professor affiliated at DAISI of UNAM. ',
         avatar: '/team/eulertito.jpeg',
-        social: {
-          facebook: '#',
-          email: 'example@example.com',
-          linkedin: '#',
-          twitter: '#'
-        }
+        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=18932'
       },
       {
         name: 'Carlos Silva ',
@@ -207,11 +143,7 @@ export const TEAM_MEMBERS = [
         category: 'colaborador',
         description: 'Principal professor affiliated at DAISI of UNAM.',
         avatar: '/team/carlos.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=23119'
       },
       
       {
@@ -220,11 +152,7 @@ export const TEAM_MEMBERS = [
         category: 'colaborador',
         description: 'Professor affiliated at DAISI of UNAM.',
         avatar: '/team/maribel.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=84960'
       },
       
       // -- FUNDADORES ()
@@ -234,12 +162,7 @@ export const TEAM_MEMBERS = [
         category: 'fundador',
         description: 'IEEE Senior Member | Computer Science | NLP Researcher',
         avatar: '/team/honorio.png',
-        social: {
-          facebook: 'https://www.facebook.com/01001000.01A',
-          email: 'honorio.apz@gmail.com',
-          linkedin: 'https://www.linkedin.com/in/honorio-aa/',
-          twitter: 'https://twitter.com/honyoffuture'
-        }
+        url: 'https://honorioapaza.aimaralab.com/',
       },
       {
         name: 'Elmer Collanqui',
@@ -247,11 +170,7 @@ export const TEAM_MEMBERS = [
         category: 'fundador',
         description: 'RAG/NLP researcher | Student of Engineering and Computer Science.',
         avatar: '/team/elmer.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://pe.linkedin.com/in/elmer-collanqui-casapia-977325315'
       },
       {
         name: 'Victor Yana',
@@ -259,11 +178,7 @@ export const TEAM_MEMBERS = [
         category: 'fundador',
         description: 'Master in Business Management | Professor at DAISI of UNAM.',
         avatar: '/team/victor.png',
-        social: {
-          email: '/',
-          facebook: '/',
-          linkedin: '/'
-        }
+        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=27970'
       }
       
     ];
