@@ -16,7 +16,7 @@ export const TEAM_MEMBERS = [
       },
       
       {
-        name: 'Sofia Yamilet Quispe Salas',
+        name: 'Sofia Quispe',
         role: ' ',
         category: 'activo',
         description: 'Data scientist with a strong background in AI and BI.',
@@ -136,7 +136,7 @@ export const TEAM_MEMBERS = [
       
       // -- HONORARIO
       {
-        name: 'José Eduardo Ochoa Luna',
+        name: 'José Ochoa Luna',
         role: ' ',
         category: 'honorario',
         description: 'Ph.D. in Science Engineering School at the University of São Paulo, Brazil ',
@@ -149,7 +149,7 @@ export const TEAM_MEMBERS = [
         }
       },
       {
-        name: 'Américo Rubín de Celis Vidal',
+        name: 'Américo Rubín de Celis',
         role: 'PhD. en Ingeniería Eléctrica',
         category: 'honorario',
         description: 'PhD in Electrical Engineering from the Pontifical Catholic University of Brazil. ',
@@ -162,7 +162,7 @@ export const TEAM_MEMBERS = [
         }
       },
       {
-        name: 'Wilbur N. Chiuyari Veramendi',
+        name: 'Wilbur N. Chiuyari ',
         role: 'Image Processing | Computer Vision',
         category: 'honorario',
         description: 'PhD student in Computer Science at ICMC-USP (Brazil).',
@@ -176,7 +176,7 @@ export const TEAM_MEMBERS = [
       // -- COLABORADORES (ejemplo)
 
       {
-        name: 'Anibal Fernando Flores García',
+        name: 'Anibal Flores ',
         role: ' ',
         category: 'colaborador',
         description: 'PhD in Computer Science at UNSA, Artificial Intelligence researcher. ',
@@ -202,7 +202,7 @@ export const TEAM_MEMBERS = [
         }
       },
       {
-        name: 'Carlos Silva Delgado',
+        name: 'Carlos Silva ',
         role: 'Docente Universitario',
         category: 'colaborador',
         description: 'Principal professor affiliated at DAISI of UNAM.',
@@ -254,7 +254,7 @@ export const TEAM_MEMBERS = [
         }
       },
       {
-        name: 'Victor Yana Mamani',
+        name: 'Victor Yana',
         role: 'Docente Universitario',
         category: 'fundador',
         description: 'Master in Business Management | Professor at DAISI of UNAM.',
