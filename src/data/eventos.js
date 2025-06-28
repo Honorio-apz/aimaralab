@@ -18,7 +18,7 @@ export const EVENTOS = [
       },
       {
         hour: "15:30 – 16:15", 
-        activity: "Presentation topic: to be announced...",
+        activity: "LatamGPT: El Gran Modelo de Lenguaje Latinoamericano Abierto y como lo estamos alimentando",
         speaker: "Manuel Cifuentes"
       },
       {
