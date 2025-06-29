@@ -15,7 +15,7 @@ const images = [
 ];
 
 // Puedes ajustar este valor para cambiar el tiempo entre transiciones automáticas (en milisegundos)
-const AUTO_TRANSITION_INTERVAL = 8000; 
+const AUTO_TRANSITION_INTERVAL = 14000; 
 
 export default function CreativeCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
