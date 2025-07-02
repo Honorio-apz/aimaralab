@@ -3,7 +3,7 @@ export const EVENTOS = [
     title: "AiMARA SUMMIT 2025 - Artificial Intelligence Meeting for Applied Research in the Americas",
     date: "Thursday, July 10, 2025",
     time: "15:00 – 20:00",
-    location: "Auditorio EPISI, UNAM, Ilo",
+    location: "Aula Magna EPISI, UNAM, Ilo",
     image: [
       "../../portada_eventos/aimara2025.png",
       "../../portada_eventos/aimara20252.png",
