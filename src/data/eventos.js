@@ -23,7 +23,7 @@ export const EVENTOS = [
       },
       {
         hour: "16:15 – 17:00",
-        activity: "Presentation topic: to be announced...",
+        activity: "Optimización del Rendimiento Académico Universitario aplicando Ciencia de Datos al Examen de Admisión",
         speaker: "Israel Chaparro"
       },
       {
