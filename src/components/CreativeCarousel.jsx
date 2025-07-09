@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Facebook, Linkedin } from 'lucide-react';
 
 const images = [
-  "fotos/ConvenioCENIAyAIMARA.png"
+  "fotos/ConvenioCENIAyAIMARA.png",
   "fotos/foto4.jpg",
   "fotos/foto5.jpg",
   "fotos/foto8.jpg",
