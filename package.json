@@ -21,8 +21,10 @@
     "@material-tailwind/html": "^2.2.2",
     "aos": "^2.3.4",
     "astro-icon": "^1.1.0",
+    "dotenv": "^17.2.0",
     "framer-motion": "^11.3.24",
     "lucide-react": "^0.427.0",
+    "nodemailer": "^7.0.5",
     "photoswipe": "^5.4.3",
     "react": "^18.3.1"
   }

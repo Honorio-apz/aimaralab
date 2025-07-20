@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+export const prerender = false;
+---
+
+<BaseLayout title="Eventos">
+  <html class="bg-white">
+    <body class="font-nunito bg-white text-gray-800">
+      <section class="max-w-4xl mx-auto px-6 py-16">
+        <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto text-center">
+          Contact Us
+        </h1>
+        <p class="text-center text-gray-600 mb-10">
+          If you have questions, partnership ideas, or just want to get in touch, we'd love to hear from you.
+        </p>
+
+        <!-- Formulario Interno -->
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" name="name" required
+                   class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-celeste_aimara focus:border-celeste_aimara"/>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" required
+                   class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-celeste_aimara focus:border-celeste_aimara"/>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea name="message" rows="5" required
+                      class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-celeste_aimara focus:border-celeste_aimara"></textarea>
+          </div>
+
+          <div class="flex justify-center">
+            <button type="submit"
+                    class="px-6 py-2 rounded-lg bg-black text-white font-medium hover:bg-celeste_aimara hover:text-black transition">
+              Send Message
+            </button>
+          </div>
+        </form>
+
+        <p id="status-message" class="text-center text-sm text-gray-600 mt-4"></p>
+
+        <div class="mt-12 text-center text-sm text-gray-500">
+          Or contact us directly at <a href="mailto:contact@aimaralab.com" class="text-celeste_aimara font-medium hover:underline">contact@aimaralab.com</a>
+        </div>
+      </section>
+
+      <script is:inline>
+        const form = document.getElementById('contact-form');
+        const statusMessage = document.getElementById('status-message');
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value
+          };
+
+          statusMessage.textContent = 'Sending...';
+
+          try {
+            const response = await fetch('/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            statusMessage.textContent = result.success
+              ? 'Message sent successfully!'
+              : 'Failed to send message.';
+          } catch (error) {
+            statusMessage.textContent = 'Error sending message.';
+          }
+        });
+      </script>
+    </body>
+  </html>
+</BaseLayout>
