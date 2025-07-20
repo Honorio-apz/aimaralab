@@ -34,6 +34,3 @@ export async function POST({ request }) {
     });
   }
 }
-
-console.log('MAIL_USER:', import.meta.env.MAIL_USER);
-console.log('MAIL_PASS:', import.meta.env.MAIL_PASS ? 'CARGADA' : 'VACÍA');
