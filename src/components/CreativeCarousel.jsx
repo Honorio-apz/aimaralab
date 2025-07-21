@@ -2,10 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Facebook, Linkedin } from 'lucide-react';
 
 const images = [
-  "fotos/ConvenioCENIAyAIMARA.png",
-  "fotos/foto4.jpg",
-  "fotos/foto5.jpg",
-  "fotos/foto8.jpg",
   "fotos/foto10-min.png",
   "fotos/foto14-min.png",
   "fotos/foto15-min.png",
@@ -13,6 +9,7 @@ const images = [
   "fotos/foto17-min.png",
   "fotos/foto19-min.png",
   "fotos/foto21-min.png",
+  "fotos/foto4.jpg",
 ];
 
 // Puedes ajustar este valor para cambiar el tiempo entre transiciones automáticas (en milisegundos)
