@@ -14,12 +14,15 @@ export async function POST({ request }) {
       },
     });
 
+
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: `"AiMara Contact Form" <${import.meta.env.MAIL_USER}>`,  // Siempre tu correo autenticado
       to: 'contact@aimaralab.com',
       subject: 'New Contact Message',
-      text: message,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      replyTo: email,   // Al responder, irá directo al usuario
     });
+
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { 'Content-Type': 'application/json' },
