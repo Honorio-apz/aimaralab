@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { BLOGS } from "../data/blogs.js";
+---
+
+<BaseLayout title="Blogs">
+
+<section class="bg-gray-50 w-full py-16 px-4">
+  <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
+    <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto">
+      AiMara Lab Blog
+    </h1>
+    <h2 class="text-xl font-light text-gray-500 mb-6 font-roboto">
+      Insights, Reflections & Updates
+    </h2>
+    <p class="text-base text-gray-600 font-normal leading-relaxed max-w-2xl">
+      Discover articles and updates about artificial intelligence, events, workshops, and community activities from AiMara Lab. Stay connected with our latest reflections and research.
+    </p>
+  </div>
+</section>
+
+<section class="w-full min-h-screen bg-white pt-8 pb-24">
+  <div class="mx-auto max-w-7xl px-4">
+    <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+      {BLOGS.map((blog, index) => (
+        <article class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+          <img src={blog.image_titular} alt={blog.title} class="w-full h-60 object-cover" />
+          <div class="p-4">
+            <h2 class="text-xl font-semibold">{blog.title}</h2>
+            <p class="text-gray-500 text-sm mb-2">{blog.date}</p>
+            
+            {blog.enlace_blog ? (
+              <a href={blog.enlace_blog.url} class="text-celeste_aimara font-medium hover:underline">
+                {blog.enlace_blog.label}
+              </a>
+            ) : null}
+
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+</BaseLayout>

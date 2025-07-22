@@ -1,5 +1,7 @@
 ---
-import { GALLERY_IMAGES } from '../../data/galleryImages.js'; // Cambia la ruta si es necesario
+import BaseLayout from '../../layouts/BaseLayout.astro'; // Cambia la ruta si es necesario
+import { blogs } from '../../data/blogs.js';
+
 ---
 
 <section class="bg-gray-50 w-full py-16 px-4">
@@ -17,41 +19,23 @@ import { GALLERY_IMAGES } from '../../data/galleryImages.js'; // Cambia la ruta 
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 py-8">
-  
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    {GALLERY_IMAGES.map((img, i) => (
-      <div>
-        <div class="image-item cursor-pointer" data-src={img.href}>
-          <img
-            src={img.src}
-            alt={`Foto ${i + 1}`}
-            class="object-cover object-center h-40 w-full rounded-lg md:h-60 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
-          />
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
 
-<!-- Modal para visualización de imágenes -->
-<div 
-  id="imageModal" 
-  class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 hidden overflow-hidden p-2 sm:p-4"
->
-  <div class="relative flex items-center justify-center">
-    <button 
-      id="closeModal" 
-      class="absolute -top-8 sm:-top-10 right-0 text-white bg-gray-700/50 hover:bg-gray-700/70 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center z-60 text-sm sm:text-base"
-    >
-      ✕
-    </button>
-    <img 
-      id="modalImage" 
-      src="" 
-      alt="Imagen a tamaño completo" 
-      class="max-w-[95%] max-h-[95vh] object-contain transition-all duration-300 ease-in-out"
-    />
-  </div>
-</div>
+
+<section class="max-w-5xl mx-auto px-4 py-10">
+   
+    <div class="grid gap-8 md:grid-cols-2">
+      {blogs.map(blog => (
+        <article class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+          <img src={blog.image} alt={blog.title} class="w-full h-60 object-cover" />
+          <div class="p-4">
+            <h2 class="text-xl font-semibold">{blog.title}</h2>
+            <p class="text-gray-500 text-sm mb-2">{blog.date}</p>
+            <a href={blog.url} class="text-celeste_aimara font-medium hover:underline">
+              Read more...
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
 
