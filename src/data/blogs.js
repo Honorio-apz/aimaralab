@@ -17,10 +17,11 @@ export const BLOGS = [
   {
     title: "AiMARA: From Ancestral Language to Future Technology",
     date: "July, 2023",
-    image_titular: "../../blogs/aimaratvperu.jpg",
+    image_titular: "../../blogs/traduccion.jpeg",
     imagenes_cuerpo: [
-      "../../blogs/codigotrad.jpg",
-      "../../blogs/nerualmachine.jpg"
+      "../../blogs/nerualmachine.jpg",
+      "../../blogs/aimaratvperu.jpg"
+      
     ],
     texto_blog: "The name 'AiMARA' comes from the fusion of 'AI' (Artificial Intelligence) and 'MARA', a word in the Aymara language meaning 'year', symbolizing the beginning of a new era of inclusive technology. This union represents the convergence between technological innovation and Andean cultural roots, demonstrating that artificial intelligence can also be built from identity and diversity.\n\nThe term was publicly mentioned for the first time by Honorio Apaza during an interview, when presenting his first prototype of a machine translator for the Aymara language. Naming it 'AiMARA' reflected the cultural and technological essence of his project: developing artificial intelligence that actively involves indigenous communities. That moment marked the official birth of the AiMARA concept.\n\nShortly after, the name transcended its initial technical role and became the symbol of a shared vision. In 2019, at the National University of Moquegua (UNAM), the AiMARA Research Group was born, where students and teachers took on the challenge of creating their own technologies in natural language processing and computer vision, guided by the motto: create technology, not just learn to use it.\n\nIn 2025, this dream evolved with the creation of AiMARA Lab, a non-profit organization dedicated to scientific research, technological development, and the digital preservation of ancestral culture. AiMARA Lab combines science, education, and innovation with an ethical and socially responsible perspective.\n\nToday, the term 'AiMARA' is no longer just a technical name nor a linguistic coincidence. It is a symbol of how technology can be born from our roots and become a tool for cultural preservation and empowerment of indigenous peoples. From southern Peru, AiMARA Lab shows that artificial intelligence can also be created by and for communities.\n\nAiMARA Lab is committed to developing artificial intelligence technologies with local impact and global projection.",
     enlace_blog: { 
