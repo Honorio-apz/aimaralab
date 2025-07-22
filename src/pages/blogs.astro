@@ -24,7 +24,7 @@ import { BLOGS } from "../data/blogs.js";
     <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
       {BLOGS.map((blog, index) => (
         <article class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-          <img src={blog.image_titular} alt={blog.title} class="w-full h-60 object-cover" />
+          <img src={blog.image_titular} alt={blog.title} class="w-full h-72 object-cover" />
           <div class="p-4">
             <h2 class="text-xl font-semibold">{blog.title}</h2>
             <p class="text-gray-500 text-sm mb-2">{blog.date}</p>
