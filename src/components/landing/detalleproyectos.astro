@@ -29,15 +29,16 @@ import { PROJECTS } from '../../data/projects.js'; // ajusta la ruta según la u
     
     
     {PROJECTS.map((project, idx) => (
-      <div class={`flex flex-col md:flex-row items-center justify-center gap-8 
+      <div class={`flex flex-col md:flex-row items-center justify-center gap-8 mb-9 
         ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
         
         <div class="flex-shrink-0 w-[340px] h-[340px] bg-white rounded-2xl border border-gray-200 flex items-center justify-center">
           <img src={project.image} alt={project.title} class="object-contain w-4/5 h-4/5" />
         </div>
-    
+        
         <div class="flex-1 max-w-xl">
-          <h3 class="text-2xl font-semibold text-gray-900 mb-4">{project.title}</h3>
+          <h1 class="text-2xl font-bold mb-2 tracking-tight text-gray-800 font-roboto">{project.title}</h1>
+           <div class="w-16 h-[2.5px] bg-celeste_aimara rounded my-3"></div>
           <p class="text-gray-600 mb-6">{project.description}</p>
           {project.link && (
             <a href={project.link} target="_blank" class="inline-block bg-black text-white px-5 py-2 rounded-full text-sm font-medium shadow transition hover:bg-celeste_aimara hover:text-black">
@@ -46,6 +47,7 @@ import { PROJECTS } from '../../data/projects.js'; // ajusta la ruta según la u
           )}
         </div>
       </div>
+      
     ))}
     
   </div>

@@ -15,7 +15,7 @@ export const BLOGS = [
   },
 
   {
-    title: "AiMARA: From Ancestral Language to Future Technology",
+    title: "AiMARA: From Native Language to Future Technology",
     date: "July, 2023",
     image_titular: "../../blogs/traduccion.jpeg",
     imagenes_cuerpo: [
