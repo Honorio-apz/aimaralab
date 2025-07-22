@@ -16,7 +16,7 @@ export const BLOGS = [
 
   {
     title: "AiMARA: From Ancestral Language to Future Technology",
-    date: "Saturday, July 12, 2025",
+    date: "July, 2023",
     image_titular: "../../blogs/aimaratvperu.jpg",
     imagenes_cuerpo: [
       "../../blogs/codigotrad.jpg",
