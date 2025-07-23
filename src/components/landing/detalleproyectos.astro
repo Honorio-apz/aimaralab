@@ -7,6 +7,7 @@ import { PROJECTS } from '../../data/projects.js'; // ajusta la ruta según la u
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 -->
+<!--
 <section class="bg-gray-50 w-full py-16 px-4">
   <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
     <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto">
@@ -20,11 +21,12 @@ import { PROJECTS } from '../../data/projects.js'; // ajusta la ruta según la u
     </p>
   </div>
 </section>
+-->
 
 
 
 
-<section id="proyectos" class="g-gradient-to-b w-full min-h-screen">
+<section id="proyectos" class="g-gradient-to-b w-full min-h-screen my-9">
   <div class="mx-auto w-full max-w-7xl px-4 py-8">
     
     
@@ -32,7 +34,7 @@ import { PROJECTS } from '../../data/projects.js'; // ajusta la ruta según la u
       <div class={`flex flex-col md:flex-row items-center justify-center gap-8 mb-9 
         ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
         
-        <div class="flex-shrink-0 w-[340px] h-[340px] bg-white rounded-2xl border border-gray-200 flex items-center justify-center">
+        <div class="flex-shrink-0 w-[300px] h-[300px] bg-white rounded-2xl border border-gray-200 flex items-center justify-center">
           <img src={project.image} alt={project.title} class="object-contain w-4/5 h-4/5" />
         </div>
         

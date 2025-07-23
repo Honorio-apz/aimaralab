@@ -17,12 +17,12 @@ function miembrosPorCategoria(categoria) {
 ---
 
 
+<!--
 <section class="bg-gray-50 w-full py-16 px-4">
   <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
     <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto">
       Meet our AiMara Lab Team
     </h1>
-    <!-- Subrayado removido -->
     <h2 class="text-xl font-light text-gray-500 mb-6 font-roboto">
       Researchers, Innovators & Collaborators
     </h2>
@@ -31,10 +31,15 @@ function miembrosPorCategoria(categoria) {
     </p>
   </div>
 </section>
+-->
 
 
 
-
+<!-- esto es otra opcion 
+          <h2 class="text-2xl font-light font-roboto text-celeste_aimara mb-8 text-left border-l-4 border-celeste_aimara pl-4">
+            {groupTitle}
+          </h2>
+-->
 
 
 <section id="equipo" class="bg-white-100 w-full">
@@ -43,9 +48,9 @@ function miembrosPorCategoria(categoria) {
       const members = miembrosPorCategoria(key);
       return members.length > 0 && (
         <div>
-          <h2 class="text-2xl font-light font-roboto text-celeste_aimara mb-8 text-left border-l-4 border-celeste_aimara pl-4">
-            {groupTitle}
-          </h2>
+          <h1 class="text-2xl font-bold mb-2 tracking-tight text-gray-800 font-roboto">{groupTitle}</h1>
+         <div class="w-16 h-[2.5px] bg-celeste_aimara rounded my-3 mb-8"></div>
+         
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {members.map(({ name, description, avatar, url }) => (
               <a
