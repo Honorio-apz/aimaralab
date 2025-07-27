@@ -8,7 +8,7 @@ export const PROJECTS = [
         title: "AiMara Translator",
         description: "Project focused on the generation of data corpora in native Peruvian languages, such as Quechua and Aymara, for the development of artificial intelligence models capable of translating, recognizing audios and generating contextual and audio content in these languages.",
         image: "/traductor.png",
-        app: "→ AiMara Translator App",
+        app: "AiMara Translator App",
         link:"https://youtu.be/9voTTR5Qb5I"
       },
       {
