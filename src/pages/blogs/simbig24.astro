@@ -21,9 +21,8 @@ const blog = BLOGS[0]; // Cambia el índice según el blog correspondiente
         />
       </div>
 
-      <div class="text-base text-gray-700 leading-relaxed mb-12">
-        <p style="white-space: pre-line;">{blog.texto_blog}</p>
-        
+      <div class="text-base text-gray-700 leading-relaxed mb-12 [&_strong]:text-2xl">
+        <p set:html={blog.texto_blog}></p>
       </div>
 
       {blog.imagenes_cuerpo.length > 0 && (
