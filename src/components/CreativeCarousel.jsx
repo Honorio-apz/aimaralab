@@ -6,9 +6,9 @@ const images = [
   "fotos/foto14-min.png",
   "fotos/foto15-min.png",
   "fotos/foto16-min.png",
-  "fotos/foto17-min.png",
-  "fotos/foto19-min.png",
-  "fotos/foto21-min.png",
+  "blogs/simbig1.png",
+  "blogs/simbig4.png",
+  "blogs/simbig2.png",
   "fotos/foto4.jpg",
 ];
 
