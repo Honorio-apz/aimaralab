@@ -2,7 +2,9 @@ export const PROJECTS = [
       {
         title: "AiMara Chatbots",
         description: "A project focused on creating specific data corpora according to needs and creating chatbots with artificial intelligence models to optimize administrative processes in public and private institutions.",
-        image: "/chat.png"
+        image: "/chat.png",
+        app: "AiMara Chat App",
+        link:"https://mi-aplicacion-rag-507036013372.southamerica-west1.run.app/"
       },
       {
         title: "AiMara Translator",
