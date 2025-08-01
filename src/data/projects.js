@@ -4,14 +4,14 @@ export const PROJECTS = [
         description: "A project focused on creating specific data corpora according to needs and creating chatbots with artificial intelligence models to optimize administrative processes in public and private institutions.",
         image: "/chat.png",
         app: "AiMara Chat App",
-        link:"https://mi-aplicacion-rag-507036013372.southamerica-west1.run.app/"
+        link:"http://admision.aimaralab.com/"
       },
       {
         title: "AiMara Translator",
         description: "Project focused on the generation of data corpora in native Peruvian languages, such as Quechua and Aymara, for the development of artificial intelligence models capable of translating, recognizing audios and generating contextual and audio content in these languages.",
         image: "/traductor.png",
         app: "AiMara Translator App",
-        link:"https://youtu.be/9voTTR5Qb5I"
+        link:"http://translator.aimaralab.com/"
       },
       {
         title: "AiMara Legal",
