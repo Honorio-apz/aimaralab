@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { EVENTOS } from "../../data/eventos.js";
-const event = EVENTOS[0]; // Cambia el índice según el evento, o usa un campo dinámico
+const event = EVENTOS[1]; // Cambia el índice según el evento, o usa un campo dinámico
 
 // Adaptar organizers2 (array de strings) a objetos con logo y nombre
 const organizers = (event.organizers2 || []).map((logoPath, index) => ({
