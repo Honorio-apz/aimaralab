@@ -3,7 +3,7 @@ export const EVENTOS = [
     title: "SIMBig 2025 11th International Conference on Information Management and Big Data",
     date: "Octuber 29 - 31 2025",
     time: "Full day",
-    location: "Universidad Peruana de Ciencas Aplicadas (UPC), Lima",
+    location: "UPC, Lima",
     image: "/evento-nlp.png",
     description: "SIMBig is one of the first conferences in Latin America grouping areas such as Artificial Intelligence, Machine Learning, Deep Learning, Healthcare Informatics, Natural Language Processing, Semantic Web, Software Engineering, among others.",
     
@@ -22,7 +22,7 @@ export const EVENTOS = [
       "../../portada_eventos/aimara20252.png",
       "../../portada_eventos/aimara20253.png"
     ],
-    description: "AiMARA SUMMIT 2025 – Artificial Intelligence Meeting for Applied Research in the Americas is an academic event aimed at bringing artificial intelligence closer to students, educators, and professionals in the southern region of the country through lectures, hands-on workshops, and interactions with national and international experts, fostering education, innovation, and the growth of an active AI community.",
+    description: "AiMARA SUMMIT 2025, is an academic event aimed at bringing artificial intelligence closer to students, educators, and professionals in the southern region of the country through lectures, hands-on workshops, and interactions with national and international experts, fostering education, innovation, and the growth of an active AI community.",
     agenda: [
       {
         hour: "15:00 – 15:30",
@@ -98,12 +98,12 @@ export const EVENTOS = [
 
 
   {
-    title: "Natural Language Processing and Artificial Intelligence Seminar",
+    title: "Seminar :  Natural Language Processing and Artificial Intelligence ",
     date: "10 de diciembre de 2025",
     time: "10:00 – 12:00",
     location: "Auditorio EPISI, UNAM, Ilo",
     image: "../../portada_eventos/nlp_seminar.png",
-    description: "Natural Language Processing and Artificial Intelligence Seminar is proposed as a space for learning, exchange, and discussion, aimed at students, professors, and the general public interested in exploring these technologies. This seminar will bring together prominent national experts who will share their experiences, research findings, and practical applications, focusing on the specific challenges and opportunities of our country. \n The objective of the event is to raise awareness and train attendees on the impact of NLP and AI in various fields, promoting the development of research projects and technological applications that address local and international challenges.",
+    description: "The Seminar is proposed as a space for learning, exchange, and discussion, aimed at students, professors, and the general public interested in exploring these technologies. This seminar will bring together prominent national experts who will share their experiences, research findings, and practical applications, focusing on the specific challenges and opportunities of our country. \n The objective of the event is to raise awareness and train attendees on the impact of NLP and AI in various fields, promoting the development of research projects and technological applications that address local and international challenges.",
     agenda: [
       { hour: "10:00 – 10:30", activity: "Análisis de Características MGC y UGC para Estimar Nivel de Aceptación en el sector Inmobiliario	" },
       { hour: "10:30 – 10:00", activity: "Modelos Neuronales de Traducción Automatica para las Lenguas Nativas" },
