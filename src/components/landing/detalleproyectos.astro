@@ -26,45 +26,44 @@ import { PROJECTS } from '../../data/projects.js'; // ajusta la ruta según la u
 
 
 
-<section id="proyectos" class="bg-white-to-b from-white to-gray-50 w-full min-h-screen py-16">
+<section id="proyectos" class="bg-gray-50 w-full min-h-screen py-16">
   <div class="mx-auto w-full max-w-7xl px-4">
-    
-    {PROJECTS.map((project, idx) => (
-      <div 
-        class={`group flex flex-col md:flex-row items-center justify-center gap-8 mb-16 transition-transform duration-300 
-        ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-      >
-        {/* Imagen */}
-        <div class="flex-shrink-0 w-full md:w-[320px] h-[240px] bg-white rounded-3xl border border-gray-200 overflow-hidden flex items-center justify-center transition hover:shadow-lg">
-          <img 
-            src={project.image} 
-            alt={project.title} 
-            class="object-contain w-[80%] h-[80%]" 
-          />
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
-        {/* Contenido */}
-        <div class="flex-1 max-w-2xl text-center md:text-left">
-          <h1 class="text-3xl font-semibold text-gray-800 font-roboto mb-2">
-            {project.title}
-          </h1>
-          <div class="w-16 h-[3px] bg-celeste_aimara rounded-full mb-4 mx-auto md:mx-0"></div>
-          <p class="text-gray-600 mb-5 leading-relaxed">
-            {project.description}
-          </p>
-          {project.link && (
-            <a 
-              href={project.link} 
-              target="_blank" 
-              class="px-3 py-2 rounded-lg text-base font-medium text-black bg-white border border-black hover:bg-black hover:text-white transition-colors duration-200"
-            >
-              {project.app}
-            </a>
-          )}
-        </div>
-      </div>
-    ))}
+      {PROJECTS.map((project) => (
+        <a 
+          href={project.link} 
+          target="_blank" 
+          class="block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
+        >
+          {/* Imagen */}
+          <div class="relative w-full h-48 overflow-hidden rounded-t-xl">
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-300"></div>
+          </div>
 
+          {/* Contenido */}
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 font-roboto mb-2">
+              {project.title}
+            </h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-5">
+              {project.description}
+            </p>
+            <span class="inline-flex items-center text-sm font-medium text-celeste_aimara group-hover:text-blue-600 transition-colors">
+              Ver proyecto
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
   </div>
 </section>
 
