@@ -4,23 +4,18 @@ const { event } = Astro.props;
 
 <article class="bg-white border border-black/15 rounded-xl p-6 flex flex-col h-full transition hover:shadow-lg">
 
-  <!-- Título -->
-  <h1 class="text-xl font-semibold text-gray-900 font-roboto mb-2">
-    {event.title}
-  </h1> 
-
-
-
-    <!-- Descripción -->
-    
-    <p class="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-4">
+  <div class="flex-1">
+    <h1 class="text-xl font-semibold text-gray-900 font-roboto mb-2">
+      {event.title}
+    </h1> 
+    <p class="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-3">
         {event.description}
     </p>
+  </div>
 
-    <div class="flex justify-between items-center text-sm mb-0 flex-wrap gap-3">
+  <div class="flex justify-between items-end text-sm flex-wrap gap-3 mt-auto">
 
-    <!-- Metadatos alineados a la izquierda -->
-    <div class="flex flex-wrap gap-4 items-center">
+    <div class="flex flex-col gap-2">
       <span class="flex items-center gap-1 text-celeste_aimara font-semibold">
         <svg class="w-4 h-4 text-celeste_aimara" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <rect x="3" y="4" width="18" height="18" rx="2"/>
@@ -28,7 +23,6 @@ const { event } = Astro.props;
         </svg>
         {event.date}
       </span>
-
       <span class="flex items-center gap-1 text-gray-700 font-medium">
         <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="10"/>
@@ -36,7 +30,6 @@ const { event } = Astro.props;
         </svg>
         {event.time}
       </span>
-
       <span class="flex items-center gap-1 text-gray-400">
         <svg class="w-4 h-4 text-celeste_aimara" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M12 21c-4.418 0-8-6.418-8-10A8 8 0 0 1 20 11c0 3.582-3.582 10-8 10z"/>
@@ -46,13 +39,9 @@ const { event } = Astro.props;
       </span>
     </div>
 
-    <!-- Botón alineado a la derecha -->
-    <a href={event.registration.url}
-      class="flex items-center gap-2 px-4 py-1 rounded-lg text-sm font-medium border border-black text-black bg-white transition hover:bg-black hover:text-white hover:border-black">
+    <a href={event.registration.url} class="flex items-center gap-2 px-4 py-1 rounded-lg text-sm font-medium border border-black text-black bg-white transition hover:bg-black hover:text-white hover:border-black">
       <span>See more</span>
     </a>
 
   </div>
-
-
 </article>
