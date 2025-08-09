@@ -1,7 +1,7 @@
 export const EVENTOS = [
   {
     title: "SIMBig 2025 11th International Conference on Information Management and Big Data",
-    date: "Octuber 29 - 31 2025",
+    date: "Octuber 29 - 31, 2025",
     time: "Full day",
     location: "UPC, Lima",
     image: "/evento-nlp.png",
@@ -14,7 +14,7 @@ export const EVENTOS = [
   },
   {
     title: "AiMARA SUMMIT 2025 - Artificial Intelligence Meeting for Applied Research in the Americas",
-    date: "Thursday, July 10, 2025",
+    date: "July 10, 2025",
     time: "15:00 – 20:00",
     location: "Aula Magna EPISI, UNAM, Ilo",
     image: [
@@ -99,7 +99,7 @@ export const EVENTOS = [
 
   {
     title: "Seminar :  Natural Language Processing and Artificial Intelligence ",
-    date: "10 de diciembre de 2025",
+    date: "December 10, 2025",
     time: "10:00 – 12:00",
     location: "Auditorio EPISI, UNAM, Ilo",
     image: "../../portada_eventos/nlp_seminar.png",
@@ -149,7 +149,7 @@ export const EVENTOS = [
 
   {
     title: "SIMBig 2024 11th International Conference on Information Management and Big Data",
-    date: "November 20 - 22 2024",
+    date: "November 20 - 22, 2024",
     time: "08:00 – 19:00",
     location: "Auditorio de EPISI, UNAM",
     image: "/evento-nlp.png",
