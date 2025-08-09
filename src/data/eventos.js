@@ -3,7 +3,7 @@ export const EVENTOS = [
     title: "SIMBig 2025 11th International Conference on Information Management and Big Data",
     date: "Octuber 29 - 31 2025",
     time: "Full day",
-    location: "UPC, Lima",
+    location: "Universidad Peruana de Ciencas Aplicadas - Lima, Peru",
     image: "/evento-nlp.png",
     description: "SIMBig is one of the first conferences in Latin America grouping areas such as Artificial Intelligence, Machine Learning, Deep Learning, Healthcare Informatics, Natural Language Processing, Semantic Web, Software Engineering, among others.",
     
