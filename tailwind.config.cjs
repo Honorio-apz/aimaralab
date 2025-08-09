@@ -10,7 +10,7 @@ module.exports = withMT({
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1rem" }],
         sm: ["0.875rem", { lineHeight: "1.5rem" }],
-        base: ["1rem", { lineHeight: "1.75rem" }],
+        base: ["0.955rem", { lineHeight: "1.75rem" }],
         lg: ["1.125rem", { lineHeight: "2rem" }],
         xl: ["1.25rem", { lineHeight: "2rem" }],
         "2xl": ["1.5rem", { lineHeight: "2rem" }],
@@ -23,18 +23,23 @@ module.exports = withMT({
         "9xl": ["8rem", { lineHeight: "1" }],
       },
       colors: {
+        // Colores principales del sitio
         "azul_aimara": "#303a6e",
         "celeste_aimara": "#00b4cc",
         "boton_aimara": "#209dd8",
+        
+        // El color 'black' se puede extender o sobrescribir aquí
         black: "#121212",
+
+        // Puedes simplificar 'accent' si no usas todos los matices
         accent: {
           50: "#EBEDFF",
           100: "#D6DAFF",
           200: "#A8B1FF",
           300: "#808CFF",
           400: "#5263FF",
-          500: "#00c2cb",
-          600: "#00c2cb",
+          500: "#00c2cb", // Considera un valor único para cada matiz
+          600: "#00c2cb", // Considera un valor único para cada matiz
           700: "#0012B3",
           800: "#000C75",
           900: "#00063D",
@@ -48,6 +53,4 @@ module.exports = withMT({
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
-  
 });
-
