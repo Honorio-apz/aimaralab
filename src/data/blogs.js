@@ -1,5 +1,19 @@
 export const BLOGS = [
   {
+    title: "AIMARA LAB & ARTIFICIO: A Strategic Alliance to Advance AI in Latin America",
+    date: "August, 2025",
+    image_titular: "../../blogs/image1.png",
+    imagenes_cuerpo: [
+      "../../blogs/image2.png",
+      "../../blogs/image3.png"
+    ],
+    texto_blog: "We are thrilled to announce a new strategic collaboration between AIMARA LAB and ARTIFICIO, two leading organizations in the artificial intelligence landscape. This alliance marks the beginning of a new chapter, driven by a shared mission: to develop cutting-edge AI solutions with a strong local impact and a global perspective.<br><br>Our main goal is to tackle one of the most significant challenges in our region: understanding and navigating complex urban environments. This partnership combines our strengths to create technology that can interpret the unique nuances of Latin American cities.<br><br><strong>A Fusion of Vision and Language</strong><br><br>This collaboration is built on the synergy between our fields of expertise. AIMARA LAB brings its deep knowledge in Natural Language Processing (NLP) and large-scale data management, while ARTIFICIO contributes its pioneering technology in intelligent vision for autonomous vehicles. <br><br>Together, we will focus on developing a groundbreaking project: a Multimodal Artificial Intelligence Model for the Understanding and Navigation of Complex Urban Environments in Latin America. In line with the latest trends and our commitment to the community, our focus will be on creating small, efficient, open-source models.<br><br><strong>Key Objectives and Deliverables</strong><br><br>Our joint work will be guided by clear and impactful goals:<br><br>🔹 Small Open-Source Models: The first prototype of our multimodal model will be open-source, promoting accessibility and collaborative innovation in the AI community. <br>🔹 Autonomous Driving Applications: We will pioneer new applications for autonomous driving, leveraging the model's ability to integrate visual and textual data to make navigation safer and more efficient. <br>🔹 Latin American Datasets: A key outcome will be the creation of specialized, annotated datasets that capture the specific context of our region. <br>🔹 Joint Research: We will foster scientific advancement through joint research reports and academic publications. <br><br><strong>Building the Future, Together</strong><br><br>This alliance is more than a project; it's a commitment to strengthening the scientific and technological ecosystem in Peru and Latin America. We believe in an AI that is not only powerful but also ethical, responsible, and tailored to our realities.<br><br>We are excited to embark on this journey and are confident that, by combining our visions, we will build a smarter, safer, and more connected future for our cities.",
+    "enlace_blog": {
+      "url": "/blogs/aimara-artificio-alliance",
+      "label": "Read more..."
+    }
+  },
+  {
     "title": "We are proud co-organizers of SIMBig 2024 ",
     "date": "July, 2024",
     "image_titular": "../../blogs/simbig2.png",
@@ -46,7 +60,9 @@ export const BLOGS = [
       url: "/blogs/origenaimara", 
       label: "Read more..." 
     }
-  }
+  },
+
+  
 
   // Add more blogs if desired
 ];
