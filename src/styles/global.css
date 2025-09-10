@@ -30,7 +30,7 @@
   background-color: #ffffff;
 }
 ::-webkit-scrollbar-thumb{
-  background-color: #303a6e; 
+  background-color: #9d9d9d; 
   }
 @supports (font-variation-settings: normal) {
   /* Use variable font if supported */
