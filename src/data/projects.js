@@ -4,7 +4,7 @@ export const PROJECTS = [
         description: "A project focused on creating specific data corpora according to needs and creating chatbots with artificial intelligence models to optimize administrative processes in public and private institutions.",
         image: "/chat.png",
         app: "AiMara Chat App",
-        link:"http://admision.aimaralab.com/"
+        link:"http://chat.aimaralab.com/"
       },
       {
         title: "AiMara Translator",
