@@ -4,16 +4,15 @@ export const TEAM_MEMBERS = [
       // -- ACTIVO
       {
         name: 'Mariela Nina',
-        role: 'Student | Frontend',
+        role: 'Researcher in computer science',
         category: 'activo',
         description: 'Master’s student in Computer Science at UNIFESP, Brazil.',
         avatar: '/team/mariela.png',
         url:'https://pe.linkedin.com/in/marielanina'
       },
-      
       {
         name: 'Sofia Quispe',
-        role: ' ',
+        role: 'Data Scientist',
         category: 'activo',
         description: 'Data scientist with a strong background in AI and BI.',
         avatar: '/team/sofia.png',
@@ -21,16 +20,15 @@ export const TEAM_MEMBERS = [
       },
       {
         name: 'Allison Reynoso',
-        role: 'Student | Image processing',
+        role: 'CDO of AiMara Lab | Jr. Researcher ',
         category: 'activo',
-        description: 'Researcher of handwritten text recognition (HTR) for aimara.',
+        description: 'CDO of AiMara Lab and Researcher of handwritten text recognition (HTR) for aimara.',
         avatar: '/team/allison.png',
         url:'https://pe.linkedin.com/in/allison-reynoso-serra-a1055221a'
       },
-       
       {
         name: 'Yoselin Arocutipa',
-        role: 'Student | Marketing Leader',
+        role: 'Marketing Leader',
         category: 'activo',
         description: 'Graduate of Systems Engineering and Computer Science from UNAM',
         avatar: '/team/yoselin.png',
@@ -38,7 +36,7 @@ export const TEAM_MEMBERS = [
       },
       {
         name: 'Jamir Balcona',
-        role: 'Student | Frontend',
+        role: 'Frontend',
         category: 'activo',
         description: 'Researcher of Augmented Generation Techniques Applied to Chatbots.',
         avatar: '/team/jamir.png',
@@ -47,7 +45,7 @@ export const TEAM_MEMBERS = [
       
       {
         name: 'Seline Maquera',
-        role: 'Student | Logistic leader',
+        role: 'Logistic leader',
         category: 'activo',
         description: 'Researcher of Peruvian Sign Recognition (LSP) to Quechua',
         avatar: '/team/seline.png',
@@ -62,7 +60,7 @@ export const TEAM_MEMBERS = [
       },
       {
         name: 'Edward Rocca',
-        role: 'Student | Estudiante destacado',
+        role: 'Student',
         category: 'activo',
         description: 'Student of Systems and Informatics Engineering, UNAM.',
         avatar: '/team/edward.png'
@@ -137,23 +135,7 @@ export const TEAM_MEMBERS = [
         avatar: '/team/eulertito.jpeg',
         url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=18932'
       },
-      {
-        name: 'Carlos Silva ',
-        role: 'Docente Universitario',
-        category: 'colaborador',
-        description: 'Principal professor affiliated at DAISI of UNAM.',
-        avatar: '/team/carlos.png',
-        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=23119'
-      },
       
-      {
-        name: 'Maribel Coaguila',
-        role: 'Docente Universitario',
-        category: 'colaborador',
-        description: 'Professor affiliated at DAISI of UNAM.',
-        avatar: '/team/maribel.png',
-        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=84960'
-      },
       
       // -- FUNDADORES ()
       {
@@ -162,19 +144,19 @@ export const TEAM_MEMBERS = [
         category: 'fundador',
         description: 'IEEE Senior Member | Computer Science | NLP Researcher',
         avatar: '/team/honorio.png',
-        url: 'https://honorioapaza.aimaralab.com/',
+        url: 'https://hapaza.aimaralab.com/',
       },
       {
         name: 'Elmer Collanqui',
-        role: 'Student | Frontend',
+        role: 'CTO of AiMara Lab | Jr. Researcher ',
         category: 'fundador',
-        description: 'RAG/NLP researcher | Student of Engineering and Computer Science.',
+        description: 'RAG/NLP researcher',
         avatar: '/team/elmer.png',
-        url:'https://www.linkedin.com/in/elmer-andres-collanqui-casapia-977325315'
+        url:'https://mermitas.aimaralab.com/'
       },
       {
         name: 'Victor Yana',
-        role: 'Docente Universitario',
+        role: 'Professor University',
         category: 'fundador',
         description: 'Master in Business Management | Professor at DAISI of UNAM.',
         avatar: '/team/victor.png',
