@@ -22,7 +22,7 @@ export const TEAM_MEMBERS = [
         name: 'Allison Reynoso',
         role: 'CDO of AiMara Lab | Jr. Researcher ',
         category: 'activo',
-        description: 'CDO of AiMara Lab and Researcher of handwritten text recognition (HTR) for aimara.',
+        description: 'CDO of AiMara Lab, Jr. Researcher in Researcher of handwritten text recognition (HTR) for aimara.',
         avatar: '/team/allison.png',
         url:'https://pe.linkedin.com/in/allison-reynoso-serra-a1055221a'
       },
@@ -150,7 +150,7 @@ export const TEAM_MEMBERS = [
         name: 'Elmer Collanqui',
         role: 'CTO of AiMara Lab | Jr. Researcher ',
         category: 'fundador',
-        description: 'RAG/NLP researcher',
+        description: 'CTO of AiMara Lab, Jr. Researcher, RAG/NLP researcher',
         avatar: '/team/elmer.png',
         url:'https://mermitas.aimaralab.com/'
       },
