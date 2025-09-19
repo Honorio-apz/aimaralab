@@ -47,10 +47,7 @@ export const PROJECTS = [
             text: "Explore the SITA Platform",
             url: "https://sita.aimaralab.com/"
           },
-          {
-            text: "View Our Data Initiative Progress",
-            url: "https://datos.aimaralab.com/"
-          }
+          
         ]
        
       },
