@@ -1,7 +1,39 @@
 // 1. Agrega la propiedad `category` a cada miembro según corresponda.
 export const TEAM_MEMBERS = [
-      
+      // -- FUNDADORES ()
+      {
+        name: 'Honorio Apaza',
+        role: 'Computer Science | NLP',
+        category: 'fundador',
+        description: 'IEEE Senior Member | Computer Science | NLP Researcher',
+        avatar: '/team/honorio.png',
+        url: 'https://hapaza.aimaralab.com/',
+      },
+      {
+        name: 'Elmer Collanqui',
+        role: 'CTO of AiMara Lab | Jr. Researcher ',
+        category: 'fundador',
+        description: 'CTO of AiMara Lab, Jr. Researcher, RAG/NLP researcher',
+        avatar: '/team/elmer.png',
+        url:'https://mermitas.aimaralab.com/'
+      },
+      {
+        name: 'Victor Yana',
+        role: 'Professor University',
+        category: 'fundador',
+        description: 'Master in Business Management | Professor at DAISI of UNAM.',
+        avatar: '/team/victor.png',
+        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=27970'
+      },
       // -- ACTIVO
+      {
+        name: 'Allison Reynoso',
+        role: 'CDO of AiMara Lab | Jr. Researcher ',
+        category: 'activo',
+        description: 'CDO of AiMara Lab, Jr. Researcher in Researcher of handwritten text recognition.',
+        avatar: '/team/allison.png',
+        url:'https://pe.linkedin.com/in/allison-reynoso-serra-a1055221a'
+      },
       {
         name: 'Mariela Nina',
         role: 'Researcher in computer science',
@@ -18,14 +50,7 @@ export const TEAM_MEMBERS = [
         avatar: '/team/sofia.png',
         url:'https://pe.linkedin.com/in/sofia-quispe-salas'
       },
-      {
-        name: 'Allison Reynoso',
-        role: 'CDO of AiMara Lab | Jr. Researcher ',
-        category: 'activo',
-        description: 'CDO of AiMara Lab, Jr. Researcher in Researcher of handwritten text recognition (HTR) for aimara.',
-        avatar: '/team/allison.png',
-        url:'https://pe.linkedin.com/in/allison-reynoso-serra-a1055221a'
-      },
+      
       {
         name: 'Yoselin Arocutipa',
         role: 'Marketing Leader',
@@ -137,30 +162,6 @@ export const TEAM_MEMBERS = [
       },
       
       
-      // -- FUNDADORES ()
-      {
-        name: 'Honorio Apaza',
-        role: 'Computer Science | NLP',
-        category: 'fundador',
-        description: 'IEEE Senior Member | Computer Science | NLP Researcher',
-        avatar: '/team/honorio.png',
-        url: 'https://hapaza.aimaralab.com/',
-      },
-      {
-        name: 'Elmer Collanqui',
-        role: 'CTO of AiMara Lab | Jr. Researcher ',
-        category: 'fundador',
-        description: 'CTO of AiMara Lab, Jr. Researcher, RAG/NLP researcher',
-        avatar: '/team/elmer.png',
-        url:'https://mermitas.aimaralab.com/'
-      },
-      {
-        name: 'Victor Yana',
-        role: 'Professor University',
-        category: 'fundador',
-        description: 'Master in Business Management | Professor at DAISI of UNAM.',
-        avatar: '/team/victor.png',
-        url:'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=27970'
-      }
+      
       
     ];
