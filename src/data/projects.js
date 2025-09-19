@@ -14,7 +14,7 @@ export const PROJECTS = [
         ],
         texto_blog: `
         <strong>Bridging Worlds: The Story of the AiMara Translator Project</strong><br><br>
-        The Neural Machine Translation for Native Peruvian Languages project was born from a deeply personal mission. It was initiated by Honorio Apaza and Mariela Ninna, both systems and computer engineers deeply rooted in the Aymara culture, whose native language is Aymara. Their vision was to build a bridge between their ancestral heritage and the forefront of technological evolution.<br><br>
+        The Neural Machine Translation for Native Peruvian Languages project was born from a deeply personal mission. It was initiated by member of AiMara Lab, both systems and computer engineers deeply rooted in the Aymara culture, whose native language is Aymara. Their vision was to build a bridge between their ancestral heritage and the forefront of technological evolution.<br><br>
         What began as a personal initiative has since grown into a collaborative movement, attracting more individuals passionate about a shared goal: translating the Aymara language for a global audience. Our mission is twofold: to ensure the Aymara community is an active participant in the digital age, and to develop practical solutions that directly benefit native communities.<br><br>
 
         <strong>From Theory to Practice: Our Technology</strong><br><br>
