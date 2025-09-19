@@ -1,10 +1,123 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Proy_completos from "../components/landing/detalleproyectos.astro";
-
+import { PROJECTS } from '../data/projects.js';
 ---
 <BaseLayout title="Proyectos">
 
-<Proy_completos />
+<section id="proyectos" class="bg-white w-full min-h-screen py-16">
+  <div class="mx-auto w-full max-w-7xl px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+      {PROJECTS.map((project) => (
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col">
+          
+          <div class="relative w-full h-48 overflow-hidden rounded-t-xl">
+            <img 
+              src={project.image} 
+              alt={project.short_title} 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-semibold text-gray-900 font-roboto mb-2">
+              {project.short_title}
+            </h3>
+            <p class="text-sm text-gray-600 mb-6 leading-relaxed line-clamp-5 flex-grow">
+              {project.short_description}
+            </p>
+
+            {/* --- SECCIÓN DE BOTONES ACTUALIZADA --- */}
+            <div class="mt-auto flex flex-col gap-2">
+              
+              {/* BOTÓN PRINCIPAL (Siempre se muestra si hay un enlace principal) */}
+              {project.link_ver_detalle && (
+                <a
+                  href={project.link_ver_detalle}
+                  target={project.link_ver_detalle.startsWith('http') ? '_blank' : '_self'}
+                  rel={project.link_ver_detalle.startsWith('http') ? 'noopener noreferrer' : ''}
+                  class="project-button-primary"
+                >
+                  {/* El texto del botón cambia si es un blog o un proyecto externo */}
+                  <span>{project.link_ver_detalle.startsWith('/projects') ? 'Read Blog' : 'See Proyect'}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5-.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                  </svg>
+                </a>
+              )}
+
+              {/* BOTONES SECUNDARIOS (Solo se muestran si existen en los datos) */}
+              {project.project_links && project.project_links.length > 0 && (
+                <div class="flex flex-col gap-1.5 pt-2"> {/* Contenedor para los 3 botones */}
+                  {project.project_links.map(link => (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-button-secondary"
+                    >
+                      <span>{link.text}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+      
+    </div>
+  </div>
+</section>
 
 </BaseLayout>
+
+<style>
+/* El CSS sigue siendo el mismo de la versión anterior, no necesita cambios. */
+
+/* Estilo base para ambos tipos de botones */
+.project-button-primary, .project-button-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+/* Botón Primario */
+.project-button-primary {
+  background-color: #00c2cb;
+  color: white;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
+.project-button-primary:hover {
+  background-color: #00a8af;
+  transform: translateY(-1px);
+}
+.project-button-primary svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Botón Secundario */
+.project-button-secondary {
+  background-color: transparent;
+  color: #555;
+  border-color: #d1d5db;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+}
+.project-button-secondary:hover {
+  background-color: #00c2cb;
+  border-color: #00c2cb;
+  color: white;
+}
+</style>
