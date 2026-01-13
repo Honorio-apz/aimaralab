@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { EVENTOS } from "../../data/eventos.js";
+const event = EVENTOS[2]; // Cambia el índice según el evento, o usa un campo dinámico
+---
+
+<BaseLayout title={event.title}>
+  <main class="min-h-screen bg-white">
+    <section class="max-w-3xl mx-auto px-4 py-16">
+      <div class="mb-8 flex justify-center">
+        <img
+          src={event.image}
+          alt={event.title}
+          class="rounded-xl w-full max-w-full border border-black/10"
+        />
+      </div>
+      <div class="mb-8">
+        <div class="flex flex-wrap gap-4 items-center mb-2">
+          <span
+            class="inline-block bg-celeste_aimara/20 text-celeste_aimara font-semibold px-3 py-0.5 rounded text-xs"
+            >{event.date}</span
+          >
+          <span class="text-gray-800 font-semibold text-sm">{event.time}</span>
+          <span class="text-gray-400 text-sm">{event.location}</span>
+        </div>
+        <h1 class="text-3xl font-roboto font-bold text-gray-900 mb-1">
+          {event.title}
+        </h1>
+        <div class="w-16 h-1 bg-celeste_aimara rounded mb-1"></div>
+      </div>
+      <p class="text-base text-gray-700 mb-10">{event.description}</p>
+      <div class="mb-10">
+        <h2 class="text-xl font-semibold text-celeste_aimara mb-4">Program</h2>
+        <table
+          class="min-w-full text-left text-sm border border-celeste_aimara/30 rounded-xl overflow-hidden mb-4"
+        >
+          <tbody>
+            {
+              event.agenda.map((item) => (
+                <tr class="border-b border-celeste_aimara/30">
+                  <td class="py-2 px-4 font-semibold ">{item.hour}</td>
+                  <td class="py-2 px-4 text-gray-700">{item.activity}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      {
+        event.speakers && event.speakers.length > 0 && (
+          <div class="mb-10">
+            <h2 class="text-xl font-semibold text-celeste_aimara mb-4">
+              Speakers
+            </h2>
+            <div class="grid gap-6 md:grid-cols-2">
+              {event.speakers.map((speaker) => (
+                <div class="flex items-center gap-4 bg-white dark:bg-space-900 rounded-xl p-4 border border-celeste_aimara/20">
+                  <img
+                    src={speaker.photo}
+                    alt={speaker.name}
+                    class="w-16 h-16 rounded-full object-cover"
+                  />
+                  <div>
+                    <div class="font-bold text-gray-900">{speaker.name}</div>
+                    <div class="text-gray-700 text-sm">{speaker.bio}</div>
+                    <div class="text-gray-500 text-xs">{speaker.topic}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
+      <div class="mb-10">
+        <h2 class="text-xl font-semibold text-celeste_aimara mb-2">
+          Organicer
+        </h2>
+        <ul class="list-disc pl-6 text-gray-700 mb-3">
+          {event.organizers.map((org) => <li>{org}</li>)}
+        </ul>
+      </div>
+      <div class="mt-10 flex justify-end">
+        <a
+          href={event.registration.url}
+          target={event.registration.url.startsWith("http")
+            ? "_blank"
+            : "_self"}
+          class="px-8 py-3 rounded-full text-base font-medium border border-celeste_aimara text-celeste_aimara bg-white transition hover:bg-celeste_aimara hover:text-black shadow-sm"
+        >
+          {event.registration.label}
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

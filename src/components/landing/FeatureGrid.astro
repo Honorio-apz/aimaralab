@@ -1,0 +1,56 @@
+---
+import Section from "../ui/Section.astro";
+import { Beaker, Users, Lightbulb } from "lucide-react";
+
+const features = [
+    {
+        title: "Scientific Research",
+        description:
+            "Pushing the boundaries of AI with rigorous scientific methodology and cutting-edge experimentation.",
+        icon: Beaker,
+        color: "text-celeste_aimara",
+        colSpan: "md:col-span-2",
+    },
+    {
+        title: "Social Impact",
+        description:
+            "Developing AI solutions that address real-world challenges in Latin America and beyond.",
+        icon: Users,
+        color: "text-purple-400",
+        colSpan: "md:col-span-1",
+    },
+    {
+        title: "Innovation",
+        description:
+            "Bridging the gap between theoretical research and practical application.",
+        icon: Lightbulb,
+        color: "text-yellow-400",
+        colSpan: "md:col-span-3",
+    },
+];
+---
+
+<Section id="features">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+            features.map((feature) => (
+                <div
+                    class={`group relative overflow-hidden rounded-2xl bg-white dark:bg-space-900 p-8 border border-gray-200 dark:border-white/10 hover:border-aimara-teal dark:hover:border-aimara-teal transition-colors duration-300 ${feature.colSpan}`}
+                >
+                    <div
+                        class={`mb-6 inline-flex p-3 rounded-lg bg-gray-50 dark:bg-space-800 text-aimara-teal`}
+                    >
+                        <feature.icon size={28} strokeWidth={1.5} />
+                    </div>
+
+                    <h3 class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-3">
+                        {feature.title}
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {feature.description}
+                    </p>
+                </div>
+            ))
+        }
+    </div>
+</Section>

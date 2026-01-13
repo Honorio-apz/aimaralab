@@ -1,17 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/landing/Hero.astro";
-
+import ModernHero from "../components/landing/ModernHero.astro";
+import FeatureGrid from "../components/landing/FeatureGrid.astro";
 ---
-<BaseLayout title="AiMara Lab">
 
-  <Hero />
-  <!--<Proyectos />
-   <SectionOne />  
-  <SectionTwo />
-  
-  <Galeria />
-  -->
-  
- 
+<BaseLayout title="AiMara Lab" headerOverlay={true}>
+  <ModernHero />
+  <FeatureGrid />
 </BaseLayout>

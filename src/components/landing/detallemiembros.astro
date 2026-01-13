@@ -1,21 +1,18 @@
 ---
-import { TEAM_MEMBERS } from '../../data/miembros.js';
+import { TEAM_MEMBERS } from "../../data/miembros.js";
 
 // Diccionario de títulos
 const GROUPS = {
-  
   activo: "Active members",
   honorario: "Honorary members",
   colaborador: "Collaborating members",
-  fundador: "Founding members"
-
+  fundador: "Executive Board",
 };
 
 function miembrosPorCategoria(categoria) {
-  return TEAM_MEMBERS.filter(m => m.category === categoria);
+  return TEAM_MEMBERS.filter((m) => m.category === categoria);
 }
 ---
-
 
 <!--
 <section class="bg-gray-50 w-full py-16 px-4">
@@ -31,45 +28,69 @@ function miembrosPorCategoria(categoria) {
     </p>
   </div>
 </section>
--->
-
-
-
-<!-- esto es otra opcion 
+--><!-- esto es otra opcion 
           <h2 class="text-2xl font-light font-roboto text-celeste_aimara mb-8 text-left border-l-4 border-celeste_aimara pl-4">
             {groupTitle}
           </h2>
 -->
+<section
+  id="equipo"
+  class="bg-white dark:bg-black w-full min-h-screen transition-colors duration-300"
+>
+  <div class="mx-auto max-w-7xl px-6 py-24 space-y-20">
+    <div class="text-center mb-16">
+      <h1
+        class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6"
+      >
+        Meet our Team
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Researchers, Innovators & Collaborators driving AI in Latin America
+      </p>
+    </div>
 
+    {
+      Object.entries(GROUPS).map(([key, groupTitle]) => {
+        const members = miembrosPorCategoria(key);
+        return (
+          members.length > 0 && (
+            <div>
+              <h2 class="text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">
+                {groupTitle}
+              </h2>
+              <div class="w-24 h-[3px] bg-aimara-teal rounded-full mb-10" />
 
-<section id="equipo" class="bg-white-100 w-full">
-  <div class="mx-auto max-w-7xl px-6 py-12 space-y-16">
-    {Object.entries(GROUPS).map(([key, groupTitle]) => {
-      const members = miembrosPorCategoria(key);
-      return members.length > 0 && (
-        <div>
-          <h1 class="text-xl font-semibold text-gray-900 font-roboto mb-2">{groupTitle}</h1>
-         <div class="w-24 h-[2px] bg-celeste_aimara rounded-full my-3 mb-6"></div>
-         
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {members.map(({ name, description, avatar, url }) => (
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={`Go to profile of ${name}`}
-                aria-label={`Go to profile of ${name}`}
-                class="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-start transition-transform transform hover:scale-105  max-w-xs w-full mx-auto no-underline"
-
-              >
-                <img src={avatar} alt={name} class="w-full aspect-square object-cover rounded-xl mb-2" />
-                <h3 class="text-base font-bold text-black mb-1">{name}</h3>
-                <span class="text-sm text-gray-500">{description}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      );
-    })}
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                {members.map(({ name, description, avatar, url }) => (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`Go to profile of ${name}`}
+                    aria-label={`Go to profile of ${name}`}
+                    class="group flex flex-col items-center text-center p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors duration-300"
+                  >
+                    <br />
+                    <div class="w-24 h-24 aspect-square overflow-hidden rounded-full mb-4 ring-1 ring-gray-200 dark:ring-white/10 group-hover:ring-aimara-teal transition-all">
+                      <img
+                        src={avatar}
+                        alt={name}
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      />
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-aimara-teal transition-colors">
+                      {name}
+                    </h3>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">
+                      {description}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        );
+      })
+    }
   </div>
 </section>

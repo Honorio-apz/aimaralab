@@ -1,32 +1,101 @@
+---
+import ThemeToggle from "../ui/ThemeToggle.astro";
+---
 
-
-<header class="bg-white/95 backdrop-blur-md border-b border-gray-200 fixed w-full top-0 z-50 transition-all duration-300" id="header">
+<header
+  class="bg-white/80 dark:bg-space-950/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/5 fixed w-full top-0 z-50 transition-all duration-300"
+  id="header"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center py-2 md:justify-start md:space-x-10">
+    <div
+      class="flex justify-between items-center py-2 md:justify-start md:space-x-10"
+    >
       <div class="flex justify-start lg:w-0 lg:flex-1 h-[57px]">
-        <a href="/" class="flex items-center ml-2 sm:ml-4">
-          <img src="/logo/aimaralab25.png" alt="Logo" class="h-11 w-auto sm:h-11 rounded-lg" />
-           
+        <a href="/" class="flex items-center ml-2 sm:ml-4 group">
+          <!-- Light Mode Logo -->
+          <img
+            src="/logo/aimaralab25.png"
+            alt="Logo"
+            class="h-11 w-auto sm:h-11 rounded-lg dark:hidden group-hover:opacity-80 transition-opacity"
+          />
+          <!-- Dark Mode Logo -->
+          <img
+            src="/logo/aimaralab25A.png"
+            alt="Logo"
+            class="h-11 w-auto sm:h-11 rounded-lg hidden dark:block group-hover:opacity-80 transition-opacity"
+          />
         </a>
       </div>
-      <div class="-mr-2 -my-2 md:hidden">
-        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-celeste_aimara" aria-expanded="false" id="mobile-menu-button">
+      <div class="-mr-2 -my-2 md:hidden flex items-center gap-2">
+        <ThemeToggle />
+        <button
+          type="button"
+          class="bg-gray-100 dark:bg-space-900 rounded-md p-2 inline-flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-space-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-aimara-teal transition-colors"
+          aria-expanded="false"
+          id="mobile-menu-button"
+        >
           <span class="sr-only">Open menu</span>
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
-      <nav class="hidden md:flex space-x-6">
-  <a href="/" class="relative text-base font-normal text-gray-700 transition duration-300 hover:text-black after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">Home</a>
-  <a href="/about" class="relative text-base font-normal text-gray-700 transition duration-300 hover:text-black after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">About</a>
-  <a href="/miembros" class="relative text-base font-normal text-gray-700 transition duration-300 hover:text-black after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">Team</a>
-  <a href="/proyectos" class="relative text-base font-normal text-gray-700 transition duration-300 hover:text-black after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">Research</a>
-  <a href="/blogs" class="relative text-base font-normal text-gray-700 transition duration-300 hover:text-black after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">Blogs</a>
-  <a href="/eventos" class="relative text-base font-normal text-gray-700 transition duration-300 hover:text-black after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">Events</a>
-</nav>
-      <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-        <a href="/contact" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-3 py-1  border border-black rounded-lg text-base font-medium text-black bg-white hover:bg-black hover:text-white transition-colors duration-200">
+      <nav class="hidden md:flex space-x-8">
+        <a
+          href="/about"
+          class="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal transition-colors"
+          >About</a
+        >
+        <a
+          href="/miembros"
+          class="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal transition-colors"
+          >Team</a
+        >
+        <a
+          href="/publications"
+          class="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal transition-colors"
+          >Publications</a
+        >
+        <a
+          href="/proyectos"
+          class="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal transition-colors"
+          >Projects</a
+        >
+        <a
+          href="/blogs"
+          class="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal transition-colors"
+          >Blogs</a
+        >
+        <a
+          href="/eventos"
+          class="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal transition-colors"
+          >Events</a
+        >
+        <a
+          href="/galeria"
+          class="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal transition-colors"
+          >Gallery</a
+        >
+      </nav>
+      <div
+        class="hidden md:flex items-center justify-end md:flex-1 lg:w-0 gap-4"
+      >
+        <ThemeToggle />
+        <a
+          href="/contact"
+          class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full text-base font-medium text-black bg-aimara-teal hover:bg-opacity-90 transition-all duration-300 shadow-[0_0_15px_rgba(0,194,203,0.3)] hover:shadow-[0_0_20px_rgba(0,194,203,0.6)]"
+        >
           Contact us
         </a>
       </div>
@@ -34,38 +103,69 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="md:hidden hidden" id="mobile-menu">
+  <div
+    class="md:hidden hidden bg-white/95 dark:bg-space-950/95 backdrop-blur-xl border-b border-gray-200 dark:border-white/5"
+    id="mobile-menu"
+  >
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a href="/" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors duration-200">Home</a>
-      <a href="/about" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors duration-200">About</a>
-      <a href="/miembros" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors duration-200">Team</a>
-      <a href="/proyectos" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors duration-200">Research</a>
-      <a href="/blogs" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors duration-200">Blogs</a>
-      <a href="/eventos" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors duration-200">Events</a>
+      <a
+        href="/about"
+        class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal hover:bg-gray-50 dark:hover:bg-space-800 transition-colors"
+        >About</a
+      >
+      <a
+        href="/miembros"
+        class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal hover:bg-gray-50 dark:hover:bg-space-800 transition-colors"
+        >Team</a
+      >
+      <a
+        href="/publications"
+        class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal hover:bg-gray-50 dark:hover:bg-space-800 transition-colors"
+        >Publications</a
+      >
+      <a
+        href="/proyectos"
+        class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal hover:bg-gray-50 dark:hover:bg-space-800 transition-colors"
+        >Projects</a
+      >
+      <a
+        href="/blogs"
+        class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal hover:bg-gray-50 dark:hover:bg-space-800 transition-colors"
+        >Blogs</a
+      >
+      <a
+        href="/eventos"
+        class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal hover:bg-gray-50 dark:hover:bg-space-800 transition-colors"
+        >Events</a
+      >
+      <a
+        href="/galeria"
+        class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-aimara-teal dark:hover:text-aimara-teal hover:bg-gray-50 dark:hover:bg-space-800 transition-colors"
+        >Gallery</a
+      >
       <a
         href="/contact"
-        class="block w-full mt-2 px-4 py-2 border border-black rounded-lg text-base font-medium text-black bg-white hover:bg-black hover:text-white transition-colors duration-200 text-center"
+        class="block w-full mt-4 px-4 py-2 rounded-full text-base font-medium text-black bg-aimara-teal hover:bg-opacity-90 text-center transition-all duration-300 shadow-[0_0_15px_rgba(0,194,203,0.3)]"
       >
         Contact us
       </a>
     </div>
   </div>
-  
 </header>
-
-<!-- Espaciador para empujar el contenido debajo del header fijo -->
-<div id="header-spacer" class="h-16 md:h-20"></div>
-
-
-
 
 <style>
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   header {
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-out;
   }
 </style>

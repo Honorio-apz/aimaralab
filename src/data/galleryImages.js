@@ -1,24 +1,34 @@
 // src/data/galleryImages.js
 export const GALLERY_IMAGES = [
-      { href: '/fotos/foto1.jpg', src: '/fotos/foto1.jpg' },
-      { href: '/fotos/foto2.jpg', src: '/fotos/foto2.jpg' },
-      { href: '/fotos/foto3.jpg', src: '/fotos/foto3.jpg' },
-      { href: '/fotos/foto4.jpg', src: '/fotos/foto4.jpg' },
-      { href: '/fotos/foto5.jpg', src: '/fotos/foto5.jpg' },
-      { href: '/fotos/foto6.jpg', src: '/fotos/foto6.jpg' },
-      { href: '/fotos/foto7.jpg', src: '/fotos/foto7.jpg' },
-      { href: '/fotos/foto8.jpg', src: '/fotos/foto8.jpg' },
-      { href: '/fotos/foto9-min.png', src: '/fotos/foto9-min.png' },
-      { href: '/fotos/foto10-min.png', src: '/fotos/foto10-min.png' },
-      { href: '/fotos/foto11-min.png', src: '/fotos/foto11-min.png' },
-      { href: '/fotos/foto12-min.png', src: '/fotos/foto12-min.png' },
-      { href: '/fotos/foto13-min.png', src: '/fotos/foto13-min.png' },
-      { href: '/fotos/foto14-min.png', src: '/fotos/foto14-min.png' },
-      { href: '/fotos/foto15-min.png', src: '/fotos/foto15-min.png' },
-      { href: '/fotos/foto16-min.png', src: '/fotos/foto16-min.png' },
-      { href: '/fotos/foto17-min.png', src: '/fotos/foto17-min.png' },
-      { href: '/fotos/foto18-min.png', src: '/fotos/foto18-min.png' },
-      { href: '/fotos/foto19-min.png', src: '/fotos/foto19-min.png' },
-      { href: '/fotos/foto21-min.png', src: '/fotos/foto21-min.png' }
-    ];
-    
+
+  { href: '/fotos/photoE0001.png', src: '/fotos/photoE0001.png' },
+  { href: '/fotos/photoE0002.png', src: '/fotos/photoE0002.png' },
+  { href: '/fotos/photoE0000.png', src: '/fotos/photoE0000.png' },
+
+  { href: '/fotos/photo250010.png', src: '/fotos/photo250010.png' },
+  { href: '/fotos/photo250009.png', src: '/fotos/photo250009.png' },
+  { href: '/fotos/photo250008.png', src: '/fotos/photo250008.png' },
+  { href: '/fotos/photo250007.png', src: '/fotos/photo250007.png' },
+  { href: '/fotos/photo250006.png', src: '/fotos/photo250006.png' },
+  { href: '/fotos/photo250005.png', src: '/fotos/photo250005.png' },
+  { href: '/fotos/photo250004.png', src: '/fotos/photo250004.png' },
+  { href: '/fotos/photo250003.png', src: '/fotos/photo250003.png' },
+  { href: '/fotos/photo250002.png', src: '/fotos/photo250002.png' },
+
+
+  { href: '/fotos/photo240005.png', src: '/fotos/photo240005.png' },
+  { href: '/fotos/photo240004.png', src: '/fotos/photo240004.png' },
+  { href: '/fotos/photo240003.png', src: '/fotos/photo240003.png' },
+  { href: '/fotos/photo240002.png', src: '/fotos/photo240002.png' },
+  { href: '/fotos/photo240001.png', src: '/fotos/photo240001.png' },
+  { href: '/fotos/photo240000.png', src: '/fotos/photo240000.png' },
+
+  { href: '/fotos/photo230004.png', src: '/fotos/photo230004.png' },
+  { href: '/fotos/photo230003.png', src: '/fotos/photo230003.png' },
+  { href: '/fotos/photo230002.png', src: '/fotos/photo230002.png' },
+  { href: '/fotos/photo230001.png', src: '/fotos/photo230001.png' },
+  { href: '/fotos/photo230000.png', src: '/fotos/photo230000.png' },
+
+
+
+];

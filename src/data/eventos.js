@@ -1,19 +1,19 @@
 export const EVENTOS = [
   {
-    title: "SIMBig 2025 11th International Conference on Information Management and Big Data",
+    title: "SIMBig 2025 ",
     date: "Octuber 29 - 31, 2025",
     time: "Full day",
     location: "UPC, Lima",
     image: "/evento-nlp.png",
     description: "SIMBig is one of the first conferences in Latin America grouping areas such as Artificial Intelligence, Machine Learning, Deep Learning, Healthcare Informatics, Natural Language Processing, Semantic Web, Software Engineering, among others.",
-    
+
     registration: {
       url: "https://simbig.org/SIMBig2025/",
       label: "See more"
     }
   },
   {
-    title: "AiMARA SUMMIT 2025 - Artificial Intelligence Meeting for Applied Research in the Americas",
+    title: "AiMARA SUMMIT 2025 ",
     date: "July 10, 2025",
     time: "15:00 – 20:00",
     location: "Aula Magna EPISI, UNAM, Ilo",
@@ -30,7 +30,7 @@ export const EVENTOS = [
         speaker: "Organicer."
       },
       {
-        hour: "15:30 – 16:15", 
+        hour: "15:30 – 16:15",
         activity: "LatamGPT: El Gran Modelo de Lenguaje Latinoamericano Abierto y como lo estamos alimentando",
         speaker: "Manuel Cifuentes"
       },
@@ -51,8 +51,8 @@ export const EVENTOS = [
       // ...más actividades
     ],
     taller: [
-      { hour: "09:00 – 12:00", activity: "Taller: Fundamentos de Deep Learning (NVIDIA DLI Workshop)" , speaker: "Israel Chaparro"},
-      { hour: "14:00 – 18:00", activity: "Taller: Entrenando Redes Neuronales para clasificar imagenes" , speaker: "Arturo Deza"},
+      { hour: "09:00 – 12:00", activity: "Taller: Fundamentos de Deep Learning (NVIDIA DLI Workshop)", speaker: "Israel Chaparro" },
+      { hour: "14:00 – 18:00", activity: "Taller: Entrenando Redes Neuronales para clasificar imagenes", speaker: "Arturo Deza" },
       // ...más actividades
     ],
     organizers2: [
@@ -98,7 +98,7 @@ export const EVENTOS = [
 
 
   {
-    title: "Seminar :  Natural Language Processing and Artificial Intelligence ",
+    title: "Seminar :  NLP and Artificial Intelligence ",
     date: "December 10, 2025",
     time: "10:00 – 12:00",
     location: "Auditorio EPISI, UNAM, Ilo",
@@ -110,7 +110,7 @@ export const EVENTOS = [
       { hour: "12:00 – 12:00", activity: "Estudio Infodemiológico de Covid-19 Usando Minería de Datos y Procesamiento de Lenguaje Natural " }
       // ...más actividades
     ],
-    
+
     organizers: [
       "AiMara Lab",
       "Grupo de investigacion de IA",
@@ -148,7 +148,7 @@ export const EVENTOS = [
 
 
   {
-    title: "SIMBig 2024 11th International Conference on Information Management and Big Data",
+    title: "SIMBig 2024",
     date: "November 20 - 22, 2024",
     time: "08:00 – 19:00",
     location: "Auditorio de EPISI, UNAM",
@@ -183,6 +183,6 @@ export const EVENTOS = [
 
 
 
-  
+
   // Puedes agregar más eventos
 ];

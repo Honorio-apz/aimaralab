@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationsList from "../components/landing/Publications.astro";
+---
+
+<BaseLayout title="Publications | AiMara Lab">
+    <section
+        class="bg-white dark:bg-black w-full min-h-screen py-0 transition-colors duration-300"
+    >
+        <div class="mx-auto w-full max-w-7xl px-4">
+            <div class="text-center mb-16 pt-16">
+                <h1
+                    class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4"
+                >
+                    Research Publications
+                </h1>
+                <p
+                    class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+                >
+                    Our research impacts the scientific community. Explore our
+                    latest papers in AI, NLP, and Native Languages.
+                </p>
+            </div>
+
+            <PublicationsList />
+        </div>
+    </section>
+    <br />
+</BaseLayout>

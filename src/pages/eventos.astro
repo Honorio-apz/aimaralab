@@ -3,9 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Evento from "../components/landing/resumenevento.astro";
 import { EVENTOS } from "../data/eventos.js";
 ---
-<BaseLayout title="Eventos">
 
-<!--
+<BaseLayout title="Eventos">
+  <!--
 <section class="bg-gray-50 w-full py-16 px-4">
 <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
       <h1 class="text-3xl font-light mb-2 tracking-tight text-gray-800 font-roboto">
@@ -21,14 +21,23 @@ import { EVENTOS } from "../data/eventos.js";
 </section>  
 -->
 
-
-  <section class="w-full min-h-screen bg-white pt-8 pb-24 my-9">
-    
+  <section
+    class="w-full min-h-screen bg-white dark:bg-black pt-8 pb-24 my-9 transition-colors duration-300"
+  >
     <div class="mx-auto max-w-7xl px-4">
+      <div class="text-center mb-16">
+        <h1
+          class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4"
+        >
+          Events & Community
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          Symposiums, Workshops & Collaborative Activities
+        </p>
+      </div>
+
       <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-        {EVENTOS.map(evento => (
-          <Evento event={evento} />
-        ))}
+        {EVENTOS.map((evento) => <Evento event={evento} />)}
       </div>
     </div>
   </section>

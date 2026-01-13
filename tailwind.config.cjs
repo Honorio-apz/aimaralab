@@ -5,6 +5,7 @@ const withMT = require("@material-tailwind/html/utils/withMT");
 
 module.exports = withMT({
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: 'class',
   theme: {
     extend: {
       fontSize: {
@@ -23,33 +24,56 @@ module.exports = withMT({
         "9xl": ["8rem", { lineHeight: "1" }],
       },
       colors: {
-        // Colores principales del sitio
-        "azul_aimara": "#303a6e",
-        "celeste_aimara": "#00b4cc",
-        "boton_aimara": "#209dd8",
-        
-        // El color 'black' se puede extender o sobrescribir aquí
-        black: "#121212",
+        // Brand Colors
+        "aimara-teal": "#00C2CB",
+        "aimara-black": "#000000",
+        "aimara-white": "#FFFFFF",
 
-        // Puedes simplificar 'accent' si no usas todos los matices
+        // Legacy/Gradient Support (Refined)
+        "azul_aimara": "#000000", // Shifted to black for cleaner look or keep deep blue if needed for gradients
+        "celeste_aimara": "#00C2CB", // Aligned with brand teal
+        "boton_aimara": "#00A8B0", // Slightly darker teal for hover states
+
+        // Dark Theme Palette (Premium AI Aesthetic)
+        "space-950": "#050505", // Almost black
+        "space-900": "#0A0A0A", // Very dark gray
+        "space-800": "#121212", // Standard dark surface
+
+        black: "#000000",
+        white: "#FFFFFF",
+
         accent: {
-          50: "#EBEDFF",
-          100: "#D6DAFF",
-          200: "#A8B1FF",
-          300: "#808CFF",
-          400: "#5263FF",
-          500: "#00c2cb", // Considera un valor único para cada matiz
-          600: "#00c2cb", // Considera un valor único para cada matiz
-          700: "#0012B3",
-          800: "#000C75",
-          900: "#00063D",
+          50: "#E0FCFD",
+          100: "#B3F6F8",
+          200: "#80EFF3",
+          300: "#4DE8EE",
+          400: "#26E2E9",
+          500: "#00C2CB", // Brand Primary
+          600: "#009DA5",
+          700: "#00797F",
+          800: "#00565A",
+          900: "#003436",
         },
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
-        display: ["Bricolage Grotesque", ...defaultTheme.fontFamily.sans],
+        display: ["Cabinet Grotesk", ...defaultTheme.fontFamily.sans],
       },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        }
+      }
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
