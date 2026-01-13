@@ -169,3 +169,24 @@ import ThemeToggle from "../ui/ThemeToggle.astro";
     animation: fadeIn 0.5s ease-out;
   }
 </style>
+
+<script>
+  const initMobileMenu = () => {
+    const btn = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+
+    if (btn && menu) {
+      btn.onclick = () => {
+        menu.classList.toggle("hidden");
+        const isExpanded = menu.classList.contains("hidden") ? "false" : "true";
+        btn.setAttribute("aria-expanded", isExpanded);
+      };
+    }
+  };
+
+  // Run on initial load
+  initMobileMenu();
+
+  // Run on View Transitions navigation
+  document.addEventListener("astro:after-swap", initMobileMenu);
+</script>

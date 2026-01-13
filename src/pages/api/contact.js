@@ -16,7 +16,7 @@ export async function POST({ request }) {
 
 
     await transporter.sendMail({
-      from: `"AiMara Contact Form" <${import.meta.env.MAIL_USER}>`,  
+      from: `"AiMara Contact Form" <${import.meta.env.MAIL_USER}>`,
       to: 'contact@aimaralab.com',
       subject: 'New Contact Message',
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
