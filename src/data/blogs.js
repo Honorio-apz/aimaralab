@@ -1,4 +1,18 @@
 export const BLOGS = [
+  {
+    title: "Historic Milestone for AI in the Andes! AiMara Lab Wins International KHIPUx Grant to Host AI in Ilo",
+    date: "January 19, 2026",
+    image_titular: "../../blogs/KhipuxIlo.png",
+    imagenes_cuerpo: [
+      "../../blogs/ilo1.jpg",
+      "../../blogs/ilo2.jpg"
+    ],
+    texto_blog: "It is with immense pride that we announce to our community, collaborators, and friends worldwide that AiMara Lab has been officially selected as a winner of the KHIPUx program, the most prestigious initiative for Artificial Intelligence events in Latin America.<br><br>Following a selection process described by the organizing committee as \"highly competitive,\" our proposal to host <strong>KHIPUx Ilo </strong> was chosen for its technical quality, social impact, and the significant value it brings to the Southern Peru region and the Andes.<br><br><strong>What Does Being a \"Track A\" Event Mean?</strong><br>Being selected in the Track A category involves more than just receiving international seed funding; it signifies that KHIPUx Ilo has been recognized as a strategic, high-impact event. We will receive direct mentorship from global experts within the KHIPU network to ensure the event meets the highest standards of academic and organizational excellence.<br><br><strong>KHIPUx Ilo: Technological Sovereignty from the Global South</strong><br>The <strong>KHIPUx</strong> will take place on <strong>August 18 and 19, 2026</strong>, in our beloved city of Ilo, Moquegua. This will not be a conventional technology conference. Our vision is unique in the region:<br><br><em>\"To merge the forefront of Artificial Intelligence with the wisdom of the Aymara and Quechua communities (spanning Peru, Bolivia, Chile, and Argentina). We do not seek merely to preserve native languages, but to empower these communities to become protagonists and co-creators of the next generation of AI.\"</em><br><br><strong>What to Expect in August 2026?</strong><br>For two days, Ilo will become the epicenter of the discussion on AI & Native Languages, addressing critical topics such as:<br><ul><li><strong>Data Sovereignty:</strong> How do we protect and utilize our cultural data?</li><li><strong>Speech Technologies:</strong> Advances in speech recognition for oral traditions.</li><li><strong>Neural Machine Translation (NMT):</strong> Projects currently led by AiMara Lab.</li><li><strong>Ethics & Inclusion:</strong> Ensuring AI benefits everyone, leaving no one behind.</li></ul><br>We are curating an agenda with world-class speakers (targeting experts from institutions such as Google Research, Meta AI, CENIA Chile, and labs of Brazil).<br><br><strong>Stay tuned!</strong> In the coming weeks, we will open calls for:<br><ul><li><strong>Call for Papers:</strong> Present your research on NLP and Indigenous AI.</li><li><strong>Scholarships:</strong> Travel grants for students and members of native communities.</li><li><strong>Sponsorship Opportunities:</strong> For companies wishing to support technological democratization in the Andes.</li></ul><br>Thank you for believing in us. The future of AI is also written in Aymara.<br><br><strong>Jallalla KHIPUx Ilo!</strong>",
+    enlace_blog: {
+      url: "/blogs/khipux",
+      label: "Read more..."
+    }
+  },
 
   {
     title: "AIMARA LAB & ARTIFICIO: A Strategic Alliance to Advance AI in Latin America",
