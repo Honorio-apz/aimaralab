@@ -1,0 +1,288 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const project = {
+    title: "Neural Machine Translation for Native Peruvian Languages",
+    date: "September, 2025",
+    image: "/traductor2.png",
+};
+---
+
+<BaseLayout title={project.title}>
+    <main
+        class="min-h-screen bg-white dark:bg-black transition-colors duration-300"
+    >
+        {/* Hero Section - Clean & Spacious */}
+        <section class="max-w-4xl mx-auto px-6 pt-32 pb-16 md:pt-40 md:pb-24">
+            <div class="max-w-3xl">
+                <p
+                    class="text-celeste_aimara font-medium tracking-wide uppercase text-sm mb-6"
+                >
+                    {project.date}
+                </p>
+                <h1
+                    class="text-4xl md:text-6xl font-display font-bold text-gray-900 dark:text-white leading-tight mb-8"
+                >
+                    {project.title}
+                </h1>
+                <div class="w-20 h-1 bg-celeste_aimara"></div>
+            </div>
+        </section>
+
+        {/* Featured Image - Constrained & Balanced */}
+        <section class="w-full px-6 mb-24 md:mb-32">
+            <div class="max-w-4xl mx-auto">
+                <img
+                    src={project.image}
+                    alt={project.title}
+                    class="w-full h-full max-h-[500px] object-cover rounded-xl shadow-2xl dark:shadow-none dark:opacity-90"
+                />
+            </div>
+        </section>
+
+        {/* Content Section - Minimalist & Readable */}
+        <section class="max-w-3xl mx-auto px-6 pb-32">
+            <article class="space-y-24">
+                {/* Intro */}
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h2
+                        class="text-3xl font-bold text-gray-900 dark:text-white mb-8"
+                    >
+                        Bridging Worlds
+                    </h2>
+                    <p
+                        class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg"
+                    >
+                        The Neural Machine Translation for Native Peruvian
+                        Languages project was born from a deeply personal
+                        mission. It was initiated by member of AiMara Lab, both
+                        systems and computer engineers deeply rooted in the
+                        Aymara culture, whose native language is Aymara. Their
+                        vision was to build a bridge between their ancestral
+                        heritage and the forefront of technological evolution.
+                    </p>
+                    <p
+                        class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mt-6"
+                    >
+                        What began as a personal initiative has since grown into
+                        a collaborative movement, attracting more individuals
+                        passionate about a shared goal: translating the Aymara
+                        language for a global audience. Our mission is twofold:
+                        to ensure the Aymara community is an active participant
+                        in the digital age, and to develop practical solutions
+                        that directly benefit native communities.
+                    </p>
+                </div>
+
+                {/* Technology Section */}
+                <div>
+                    <h2
+                        class="text-3xl font-bold text-gray-900 dark:text-white mb-8"
+                    >
+                        Our Technology
+                    </h2>
+                    <div class="prose prose-lg dark:prose-invert max-w-none">
+                        <p
+                            class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg"
+                        >
+                            Our progress is built on a solid foundation of
+                            cutting-edge research. The current translator
+                            prototype was developed using principles from the
+                            seminal papers that power modern AI:
+                        </p>
+                        <ul class="list-none pl-0 space-y-4 my-8">
+                            <li class="flex items-start gap-3">
+                                <span class="text-celeste_aimara mt-1.5">●</span
+                                >
+                                <span
+                                    class="text-gray-700 dark:text-gray-200 italic"
+                                    >"Attention is All you Need" - Vaswani, et
+                                    al. (2017)</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-celeste_aimara mt-1.5">●</span
+                                >
+                                <span
+                                    class="text-gray-700 dark:text-gray-200 italic"
+                                    >"Effective Approaches to Attention-based
+                                    Neural Machine Translation" - Luong, et al.
+                                    (2015)</span
+                                >
+                            </li>
+                        </ul>
+                        <p
+                            class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-10"
+                        >
+                            This approach has yielded promising results,
+                            validated by standard industry metrics such as BLEU,
+                            ROUGE, and METEOR.
+                        </p>
+
+                        <a
+                            href="https://translate.aimaralab.com/"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-celeste_aimara font-bold text-lg hover:gap-4 transition-all"
+                        >
+                            Try the Translator Prototype
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                {/* SITA Section */}
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2
+                            class="text-3xl font-bold text-gray-900 dark:text-white mb-6"
+                        >
+                            SITA Platform
+                        </h2>
+                        <p
+                            class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-8"
+                        >
+                            To power our models, we developed a comprehensive
+                            system for corpus creation and validation, named
+                            SITA. It allows us to upload sentences in Spanish,
+                            which are then translated and recorded by registered
+                            native speakers.
+                        </p>
+                        <a
+                            href="https://sita.aimaralab.com/"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-celeste_aimara font-bold text-lg hover:gap-4 transition-all"
+                        >
+                            Explore SITA
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-white/5 p-8 rounded-2xl border border-gray-100 dark:border-white/5"
+                    >
+                        <div class="flex flex-col gap-4">
+                            <div
+                                class="flex items-center gap-3 text-gray-800 dark:text-gray-200"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-celeste_aimara"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                    ></path></svg
+                                >
+                                <span class="font-medium">Corpus Creation</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 text-gray-800 dark:text-gray-200"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-celeste_aimara"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    ></path></svg
+                                >
+                                <span class="font-medium">Human Validation</span
+                                >
+                            </div>
+                            <div
+                                class="flex items-center gap-3 text-gray-800 dark:text-gray-200"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-celeste_aimara"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                                    ></path></svg
+                                >
+                                <span class="font-medium">Audio Collection</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Data Initiative */}
+                <div>
+                    <h2
+                        class="text-3xl font-bold text-gray-900 dark:text-white mb-8"
+                    >
+                        Peruvian Data Initiative
+                    </h2>
+                    <p
+                        class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-10"
+                    >
+                        A robust translation model requires a vast and diverse
+                        dataset. AiMara Lab is actively recovering and
+                        structuring data from various Peruvian contexts,
+                        including news, health, education, and legal sectors.
+                    </p>
+                    <a
+                        href="https://datos.aimaralab.com/"
+                        target="_blank"
+                        class="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full text-white bg-black dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                    >
+                        View Data Initiative Progress
+                    </a>
+                </div>
+
+                {/* Footer Note */}
+                <div
+                    class="border-t border-gray-200 dark:border-white/10 pt-16"
+                >
+                    <h3
+                        class="text-xl font-bold text-gray-900 dark:text-white mb-4"
+                    >
+                        Building the Future
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">
+                        This project is more than just code; it's a commitment
+                        to cultural preservation and digital inclusion. We are
+                        continuously working to improve our models, expand our
+                        datasets, and build new tools for the Aymara community
+                        and the world.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</BaseLayout>

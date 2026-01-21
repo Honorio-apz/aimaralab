@@ -4,7 +4,7 @@ export const PROJECTS = [
     short_description: "Project focused on the generation of data corpora in native Peruvian languages, such as Quechua and Aymara, for the development of AI models capable of translating, recognizing audios and generating audio content in these languages.",
     image: "/traductor.png",
     app: "AiMara Translator App",
-    link_ver_detalle: "/projects/proyecto-aimara-translate",
+    link_ver_detalle: "/projects/neural-machine-translation",
 
     large_title: "Nueral Machine Translation for Native Peruvian Languages",
     date: "September, 2025",
