@@ -18,12 +18,14 @@ export const GALLERY_IMAGES = [
   { href: '/fotos/photo250002.png', src: '/fotos/photo250002.png' },
 
 
-
   { href: '/fotos/photo240005.png', src: '/fotos/photo240005.png' },
   { href: '/fotos/photo240004.png', src: '/fotos/photo240004.png' },
   { href: '/fotos/photo240003.png', src: '/fotos/photo240003.png' },
   { href: '/fotos/photo240002.png', src: '/fotos/photo240002.png' },
   { href: '/fotos/photo240001.png', src: '/fotos/photo240001.png' },
+  { href: '/fotos/photo240008.png', src: '/fotos/photo240008.png' },
+  { href: '/fotos/photo240007.png', src: '/fotos/photo240007.png' },
+  { href: '/fotos/photo240006.png', src: '/fotos/photo240006.png' },
   { href: '/fotos/photo240000.png', src: '/fotos/photo240000.png' },
 
   { href: '/fotos/photo230004.png', src: '/fotos/photo230004.png' },
