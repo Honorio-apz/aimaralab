@@ -23,7 +23,7 @@ export const TEAM_MEMBERS = [
     category: 'fundador',
     description: 'CDO of AiMara Lab, Jr. Researcher in Researcher of handwritten text recognition.',
     avatar: '/team/allison.png',
-    url: 'https://pe.linkedin.com/in/allison-reynoso-serra-a1055221a'
+    url: 'https://areynoso.aimaralab.com/'
   },
 
   // -- ACTIVO
